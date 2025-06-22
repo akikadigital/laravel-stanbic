@@ -2,8 +2,8 @@
 
 namespace Akika\LaravelStanbic\Tests\ValueObjects;
 
+use Akika\LaravelStanbic\Data\ValueObjects\Document;
 use Akika\LaravelStanbic\Tests\TestCase;
-use Akika\LaravelStanbic\ValueObjects\Document;
 
 class DocumentTest extends TestCase
 {
