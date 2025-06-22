@@ -1,6 +1,6 @@
 <?php
 
-namespace Akika\LaravelStanbic\ValueObjects;
+namespace Akika\LaravelStanbic\Data\ValueObjects;
 
 use Saloon\XmlWrangler\Data\RootElement;
 

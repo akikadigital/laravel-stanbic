@@ -2,9 +2,9 @@
 
 namespace Akika\LaravelStanbic\Tests;
 
+use Akika\LaravelStanbic\LaravelStanbicServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Akika\LaravelStanbic\LaravelStanbicServiceProvider;
 
 class TestCase extends Orchestra
 {

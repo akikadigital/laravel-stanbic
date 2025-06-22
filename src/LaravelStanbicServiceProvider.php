@@ -2,9 +2,9 @@
 
 namespace Akika\LaravelStanbic;
 
+use Akika\LaravelStanbic\Commands\LaravelStanbicCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Akika\LaravelStanbic\Commands\LaravelStanbicCommand;
 
 class LaravelStanbicServiceProvider extends PackageServiceProvider
 {
