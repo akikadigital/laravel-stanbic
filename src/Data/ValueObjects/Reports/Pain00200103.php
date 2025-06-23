@@ -2,7 +2,7 @@
 
 namespace Akika\LaravelStanbic\Data\ValueObjects\Reports;
 
-use Akika\LaravelStanbic\Enums\GroupStatusType;
+use Illuminate\Support\Collection;
 use Saloon\XmlWrangler\XmlReader;
 
 /**
@@ -10,9 +10,9 @@ use Saloon\XmlWrangler\XmlReader;
  */
 class Pain00200103
 {
-    public OriginalGroupInfoAndStatus $originalGroupInfoAndStatus;
-
     public GroupHeader $groupHeader;
+
+    public OriginalGroupInfoAndStatus $originalGroupInfoAndStatus;
 
     public ?OriginalPaymentInfoAndStatus $originalPaymentInfoAndStatus;
 
@@ -29,8 +29,15 @@ class Pain00200103
         return $report;
     }
 
-    public function getGroupStatus(): GroupStatusType
+    /** @return Collection<int, string> */
+    public function getAllStatusReasons(): Collection
     {
-        return $this->originalGroupInfoAndStatus->groupStatus;
+        $reasons = $this->originalGroupInfoAndStatus->statusReasonInfos->infos;
+        if ($this->originalPaymentInfoAndStatus) {
+            $reasons = $reasons->merge($this->originalPaymentInfoAndStatus->statusReasonInfos->infos);
+            $reasons = $reasons->merge($this->originalPaymentInfoAndStatus->transactionInfoAndStatus->statusReasonInfos->infos);
+        }
+
+        return $reasons;
     }
 }

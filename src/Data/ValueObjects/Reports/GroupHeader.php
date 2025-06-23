@@ -16,17 +16,19 @@ class GroupHeader
 
     public static function fromXmlReader(XmlReader $reader): self
     {
-        /** @var string */
-        $messageId = $reader->value('CstmrPmtStsRpt.GrpHdr.MsgId')->sole();
+        $root = '//CstmrPmtStsRpt/GrpHdr';
 
         /** @var string */
-        $creditDateTime = $reader->value('CstmrPmtStsRpt.GrpHdr.CreDtTm')->sole();
+        $messageId = $reader->xpathValue("{$root}/MsgId")->sole();
 
         /** @var string */
-        $initiatingPartyName = $reader->value('CstmrPmtStsRpt.GrpHdr.InitgPty.Nm')->sole();
+        $creditDateTime = $reader->xpathValue("{$root}/CreDtTm")->sole();
 
         /** @var string */
-        $initiatingPartyBicOrBei = $reader->value('CstmrPmtStsRpt.GrpHdr.InitgPty.Id.OrgId.BICOrBEI')->sole();
+        $initiatingPartyName = $reader->xpathValue("{$root}/InitgPty/Nm")->sole();
+
+        /** @var string */
+        $initiatingPartyBicOrBei = $reader->xpathValue("{$root}/InitgPty/Id/OrgId/BICOrBEI")->sole();
 
         return new GroupHeader(
             $messageId,

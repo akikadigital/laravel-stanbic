@@ -16,16 +16,16 @@ class TransactionInfoAndStatus
 
     public static function fromXmlReader(XmlReader $reader): self
     {
-        $root = 'CstmrPmtStsRpt.OrgnlPmtInfAndSts.TxInfAndSts';
+        $root = '//CstmrPmtStsRpt/OrgnlPmtInfAndSts/TxInfAndSts';
 
         /** @var string */
-        $originalInstrumentId = $reader->value("{$root}.OrgnlInstrId")->sole();
+        $originalInstrumentId = $reader->xpathValue("{$root}/OrgnlInstrId")->sole();
 
         /** @var string */
-        $originalEndToEndId = $reader->value("{$root}.OrgnlEndToEndId")->sole();
+        $originalEndToEndId = $reader->xpathValue("{$root}/OrgnlEndToEndId")->sole();
 
         /** @var string */
-        $status = $reader->value("{$root}.TxSts")->sole();
+        $status = $reader->xpathValue("{$root}/TxSts")->sole();
 
         $additionalStatusInfos = StatusReasonInfos::fromXmlReader($reader, $root);
 

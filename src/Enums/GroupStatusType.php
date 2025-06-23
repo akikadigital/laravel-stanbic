@@ -17,7 +17,7 @@ enum GroupStatusType: string
             self::Part => 'Some of the transactions in this report have been rejected by Standard Bank',
             self::Pdng => 'All the transactions in this report have passed validation and are being processed by the bank',
             self::Rjct => 'All the transactions in this report have been rejected by the Standard Bank or by external agents such as clearing houses',
-            self::Rcvd => 'For the successfully received file'
+            self::Rcvd => 'Your file has been received'
         };
     }
 }

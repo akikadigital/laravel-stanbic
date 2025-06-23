@@ -15,30 +15,30 @@ class OriginalGroupInfoAndStatus
         public int $originalNumberOfTransactions,
         public float $originalControlSum,
         public GroupStatusType $groupStatus,
-        public StatusReasonInfos $additionalStatusInfo
+        public StatusReasonInfos $statusReasonInfos
     ) {}
 
     public static function fromXmlReader(XmlReader $reader): self
     {
-        $root = 'CstmrPmtStsRpt.OrgnlGrpInfAndSts';
+        $root = '//CstmrPmtStsRpt/OrgnlGrpInfAndSts';
 
         /** @var string */
-        $originalMessageId = $reader->value("{$root}.OrgnlMsgId")->sole();
+        $originalMessageId = $reader->xpathValue("{$root}/OrgnlMsgId")->sole();
 
         /** @var string */
-        $originalMessageNameId = $reader->value("{$root}.OrgnlMsgNmId")->sole();
+        $originalMessageNameId = $reader->xpathValue("{$root}/OrgnlMsgNmId")->sole();
 
         /** @var string */
-        $originalCreditDateTime = $reader->value("{$root}.OrgnlCreDtTm")->sole();
+        $originalCreditDateTime = $reader->xpathValue("{$root}/OrgnlCreDtTm")->sole();
 
         /** @var string */
-        $originalNumberOfTransactions = $reader->value("{$root}.OrgnlNbOfTxs")->sole();
+        $originalNumberOfTransactions = $reader->xpathValue("{$root}/OrgnlNbOfTxs")->sole();
 
         /** @var string */
-        $originalControlSum = $reader->value("{$root}.OrgnlCtrlSum")->sole();
+        $originalControlSum = $reader->xpathValue("{$root}/OrgnlCtrlSum")->sole();
 
         /** @var string */
-        $groupStatus = $reader->value("{$root}.GrpSts")->sole();
+        $groupStatus = $reader->xpathValue("{$root}/GrpSts")->sole();
 
         $additionalStatusInfo = StatusReasonInfos::fromXmlReader($reader, $root);
 

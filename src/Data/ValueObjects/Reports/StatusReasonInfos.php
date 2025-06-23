@@ -13,7 +13,7 @@ class StatusReasonInfos
     public static function fromXmlReader(XmlReader $reader, string $root): self
     {
         /** @var \Illuminate\Support\Collection<int, string> */
-        $infos = $reader->value("{$root}.StsRsnInf.AddtlInf")->collect();
+        $infos = $reader->xpathValue("{$root}/StsRsnInf/AddtlInf")->collect();
 
         return new self($infos);
     }

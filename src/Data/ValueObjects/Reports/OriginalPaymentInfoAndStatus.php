@@ -14,14 +14,14 @@ class OriginalPaymentInfoAndStatus
 
     public static function fromXmlReader(XmlReader $reader): ?self
     {
-        $root = 'CstmrPmtStsRpt.OrgnlPmtInfAndSts';
+        $root = '//CstmrPmtStsRpt/OrgnlPmtInfAndSts';
 
-        if (! $reader->value($root)->first()) {
+        if (! $reader->xpathValue($root)->first()) {
             return null;
         }
 
         /** @var string */
-        $originalPaymentInfoId = $reader->value("{$root}.OrgnlPmtInfId")->sole();
+        $originalPaymentInfoId = $reader->xpathValue("{$root}/OrgnlPmtInfId")->sole();
 
         $additionalStatusInfos = StatusReasonInfos::fromXmlReader($reader, $root);
 
