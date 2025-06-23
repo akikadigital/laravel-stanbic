@@ -33,7 +33,7 @@ class ReadStatusReportsAction
 
             $report = Pain00200103::fromXml($contents);
 
-            dispatch(new Pain00200103ReportReceived($report));
+            Pain00200103ReportReceived::dispatch($report);
         });
     }
 
