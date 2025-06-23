@@ -4,8 +4,8 @@ namespace Akika\LaravelStanbic\Data\AggregateRoots;
 
 use Akika\LaravelStanbic\Data\ValueObjects\CustomerCreditTransferInitiation;
 use Akika\LaravelStanbic\Data\ValueObjects\Document;
-use Akika\LaravelStanbic\Data\ValueObjects\GroupHeader;
 use Saloon\XmlWrangler\XmlWriter;
+use ValueError;
 
 class Pain00100103
 {
@@ -13,22 +13,21 @@ class Pain00100103
 
     private string $xmlnsXsi = 'http://www.w3.org/2001/XMLSchema-instance';
 
-    public ?CustomerCreditTransferInitiation $customerCreditTransferInitiation;
-
-    public ?GroupHeader $groupHeader;
-
-    public function __construct() {}
+    public ?CustomerCreditTransferInitiation $customerCreditTransferInitiation = null;
 
     public function build(): string
     {
-        $xml = new XmlWriter;
+        if (! $this->customerCreditTransferInitiation) {
+            throw new ValueError;
+        }
 
         $document = new Document($this->xmlns, $this->xmlnsXsi);
-        $customerCreditTransferInitiation = new CustomerCreditTransferInitiation([]);
+
+        $xml = new XmlWriter;
 
         return $xml->write(
             $document->getElement(),
-            $customerCreditTransferInitiation->children,
+            $this->customerCreditTransferInitiation->getElement(),
         );
     }
 }
