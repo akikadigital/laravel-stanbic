@@ -11,7 +11,7 @@ class TransactionInfoAndStatus
         public string $originalInstrumentId,
         public string $originalEndToEndId,
         public TransactionStatusType $status,
-        public ?string $additionalStatusInfo,
+        public StatusReasonInfos $statusReasonInfos,
     ) {}
 
     public static function fromXmlReader(XmlReader $reader): self
@@ -27,14 +27,15 @@ class TransactionInfoAndStatus
         /** @var string */
         $status = $reader->value("{$root}.TxSts")->sole();
 
-        /** @var ?string */
-        $additionalStatusInfo = $reader->value("{$root}.StsRsnInf.AddtlInf")->first();
+        /** @var \Illuminate\Support\Collection<int, string> */
+        $infos = $reader->value("{$root}.StsRsnInf.AddtlInf")->collect();
+        $additionalStatusInfos = new StatusReasonInfos($infos);
 
         return new self(
             $originalInstrumentId,
             $originalEndToEndId,
             TransactionStatusType::from($status),
-            $additionalStatusInfo,
+            $additionalStatusInfos,
         );
     }
 }

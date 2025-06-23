@@ -8,7 +8,7 @@ class OriginalPaymentInfoAndStatus
 {
     public function __construct(
         public string $originalPaymentInfoId,
-        public ?string $additionalStatusInfo,
+        public StatusReasonInfos $statusReasonInfos,
         public TransactionInfoAndStatus $transactionInfoAndStatus,
     ) {}
 
@@ -23,11 +23,12 @@ class OriginalPaymentInfoAndStatus
         /** @var string */
         $originalPaymentInfoId = $reader->value("{$root}.OrgnlPmtInfId")->sole();
 
-        /** @var ?string */
-        $additionalStatusInfo = $reader->value("{$root}.StsRsnInf.AddtlInf")->first();
+        /** @var \Illuminate\Support\Collection<int, string> */
+        $infos = $reader->value("{$root}.StsRsnInf.AddtlInf")->collect();
+        $additionalStatusInfos = new StatusReasonInfos($infos);
 
         $transactionInfoAndStatus = TransactionInfoAndStatus::fromXmlReader($reader);
 
-        return new self($originalPaymentInfoId, $additionalStatusInfo, $transactionInfoAndStatus);
+        return new self($originalPaymentInfoId, $additionalStatusInfos, $transactionInfoAndStatus);
     }
 }
