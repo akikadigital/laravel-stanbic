@@ -7,11 +7,11 @@ use Akika\LaravelStanbic\Enums\CountryCode;
 class PostalAddress extends XmlValueObject
 {
     public function __construct(
-        public ?string $streetName,
-        public ?string $buildingNumber,
-        public ?string $postalCode,
-        public ?string $townName,
-        public ?CountryCode $countryCode
+        public ?string $streetName = null,
+        public ?string $buildingNumber = null,
+        public ?string $postalCode = null,
+        public ?string $townName = null,
+        public ?CountryCode $countryCode = null
     ) {}
 
     public function getName(): string

@@ -37,7 +37,8 @@ class PaymentInfo extends XmlValueObject
             ! $this->paymentTypeInfo ||
             ! $this->requestedExecutionDate ||
             ! $this->debtor ||
-            ! $this->debtorAccount
+            ! $this->debtorAccount ||
+            ! $this->creditTransferTransactionInfo
         ) {
             throw new ValueError;
         }
@@ -49,7 +50,7 @@ class PaymentInfo extends XmlValueObject
             ...$this->requestedExecutionDate->getElement(),
             ...$this->debtor->getElement(),
             ...$this->debtorAccount->getElement(),
-            // ...$this->creditTransferTransactionInfo->getElement(),
+            ...$this->creditTransferTransactionInfo->getElement(),
         ]];
     }
 

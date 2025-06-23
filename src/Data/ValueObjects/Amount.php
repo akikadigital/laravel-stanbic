@@ -7,7 +7,7 @@ use Saloon\XmlWrangler\Data\Element;
 
 class Amount extends XmlValueObject
 {
-    public function __construct(public string $instructedAmount, public Currency $currency) {}
+    public function __construct(public int $instructedAmount, public Currency $currency) {}
 
     public function getName(): string
     {
