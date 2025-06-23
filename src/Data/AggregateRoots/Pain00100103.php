@@ -60,8 +60,8 @@ class Pain00100103
 
     public function store(?string $path = null): ?string
     {
-        $uuid7 = Str::uuid7()->getHex()->toString();
-        $path ??= "PAIN_001_001_03_{$uuid7}.xml";
+        $uuid = Str::uuid()->getHex()->toString();
+        $path ??= "PAIN_001_001_03_{$uuid}.xml";
 
         /** @var string */
         $disk = config('stanbic.disk');
