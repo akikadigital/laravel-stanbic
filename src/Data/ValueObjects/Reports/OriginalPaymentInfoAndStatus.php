@@ -23,9 +23,7 @@ class OriginalPaymentInfoAndStatus
         /** @var string */
         $originalPaymentInfoId = $reader->value("{$root}.OrgnlPmtInfId")->sole();
 
-        /** @var \Illuminate\Support\Collection<int, string> */
-        $infos = $reader->value("{$root}.StsRsnInf.AddtlInf")->collect();
-        $additionalStatusInfos = new StatusReasonInfos($infos);
+        $additionalStatusInfos = StatusReasonInfos::fromXmlReader($reader, $root);
 
         $transactionInfoAndStatus = TransactionInfoAndStatus::fromXmlReader($reader);
 

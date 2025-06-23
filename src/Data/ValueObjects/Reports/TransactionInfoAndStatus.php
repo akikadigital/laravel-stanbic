@@ -27,9 +27,7 @@ class TransactionInfoAndStatus
         /** @var string */
         $status = $reader->value("{$root}.TxSts")->sole();
 
-        /** @var \Illuminate\Support\Collection<int, string> */
-        $infos = $reader->value("{$root}.StsRsnInf.AddtlInf")->collect();
-        $additionalStatusInfos = new StatusReasonInfos($infos);
+        $additionalStatusInfos = StatusReasonInfos::fromXmlReader($reader, $root);
 
         return new self(
             $originalInstrumentId,

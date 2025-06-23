@@ -15,7 +15,7 @@ class OriginalGroupInfoAndStatus
         public int $originalNumberOfTransactions,
         public float $originalControlSum,
         public GroupStatusType $groupStatus,
-        public ?string $additionalStatusInfo
+        public StatusReasonInfos $additionalStatusInfo
     ) {}
 
     public static function fromXmlReader(XmlReader $reader): self
@@ -40,8 +40,7 @@ class OriginalGroupInfoAndStatus
         /** @var string */
         $groupStatus = $reader->value("{$root}.GrpSts")->sole();
 
-        /** @var string|null */
-        $additionalStatusInfo = $reader->value("{$root}.StsRsnInf.AddtlInf")->first();
+        $additionalStatusInfo = StatusReasonInfos::fromXmlReader($reader, $root);
 
         return new self(
             $originalMessageId,
