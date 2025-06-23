@@ -18,7 +18,6 @@ class LaravelStanbicServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-stanbic')
             ->hasConfigFile()
-            ->hasViews()
             ->hasCommand(LaravelStanbicCommand::class);
     }
 }
