@@ -2,13 +2,6 @@
 
 namespace Akika\LaravelStanbic\Enums;
 
-/**
- * ACSP All the transactions have been processed successfully by Standard Bank
- * PART Some of the transactions in this report have been rejected by Standard Bank
- * PDNG All the transactions in this report have passed validation and are being processed by the bank.
- * RJCT All the transactions in this report have been rejected by the Standard Bank or by external agents such as clearing houses.
- * RCVD For the successfully received file.
- */
 enum GroupStatusType: string
 {
     case Acsp = 'ACSP';

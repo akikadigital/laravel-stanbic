@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document xmlns='urn:iso:std:iso:20022:tech:xsd:pain.002.001.03'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>20091617</MsgId>
+      <CreDtTm>2018-02-08T09:01:58</CreDtTm>
+      <InitgPty>
+        <Nm>Standard Bank SA</Nm>
+        <Id>
+          <OrgId>
+            <BICOrBEI>SBZAZAJJXXX</BICOrBEI>
+          </OrgId>
+        </Id>
+      </InitgPty>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>10003207452</OrgnlMsgId>
+      <OrgnlMsgNmId>PAIN.001.001.03</OrgnlMsgNmId>
+      <OrgnlCreDtTm>2018-02-02T16:31:28</OrgnlCreDtTm>
+      <OrgnlNbOfTxs>1</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>1000.00</OrgnlCtrlSum>
+      <GrpSts>RJCT</GrpSts>
+      <StsRsnInf>
+        <AddtlInf>Status : Processing failed</AddtlInf>
+      </StsRsnInf>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>1000075215</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Processing Failed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>01-F110000001</OrgnlInstrId>
+        <OrgnlEndToEndId>NOTPROVIDED</OrgnlEndToEndId>
+        <TxSts>RJCT</TxSts>
+        <StsRsnInf>
+          <Rsn>
+            <Cd>NARR</Cd>
+          </Rsn>
+          <AddtlInf>Status : Failed - Invalid Account Number</AddtlInf>
+          <AddtlInf>Error Code : !%</AddtlInf>
+          <AddtlInf>Error Description : ACCOUNT NO INVALID</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="ZAR">1000.00</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2018-02-08</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>/INV/</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>EPSON EUROPE BV INCO</Nm>
+            <PstlAdr>
+              <Ctry>ZA</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>281464820</Id>
+              </Othr>
+            </Id>
+            <Ccy>ZAR</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <BIC>SBZAZAJJ</BIC>
+              <ClrSysMmbId>
+                <MmbId>009953</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>ZA</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <BIC>FIRNZAJJ</BIC>
+              <ClrSysMmbId>
+                <MmbId>250655</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>ZA</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>DAVIES, HUGH</Nm>
+            <PstlAdr>
+              <StrtNm>JOHANNESBURG</StrtNm>
+              <TwnNm>GROUND FLOOR 6, DURHAM HOUSE</TwnNm>
+              <Ctry>ZA</Ctry>
+              <AdrLine>GROUND FLOOR 6, DURHAM HOUSE</AdrLine>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>260950</Id>
+              </Othr>
+            </Id>
+            <Ccy>ZAR</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>

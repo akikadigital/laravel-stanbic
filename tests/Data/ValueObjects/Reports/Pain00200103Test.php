@@ -24,6 +24,15 @@ class Pain00200103Test extends TestCase
         $this->assertEquals(GroupStatusType::Rcvd, $report->getGroupStatus());
     }
 
+    public function test_can_get_original_payment_info(): void
+    {
+        $invalidAccountNumberPath = __DIR__.'/samples/invalid_account_no.xml';
+        $content = file_get_contents($invalidAccountNumberPath);
+        $report = Pain00200103::fromXml($content);
+
+        $this->assertEquals('1000075215', $report->originalPaymentInfoAndStatus->originalPaymentInfoId);
+    }
+
     public const ACK = "<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <Document xmlns='urn:iso:std:iso:20022:tech:xsd:pain.002.001.03' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
   <CstmrPmtStsRpt>

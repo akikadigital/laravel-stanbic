@@ -14,6 +14,8 @@ class Pain00200103
 
     public GroupHeader $groupHeader;
 
+    public ?OriginalPaymentInfoAndStatus $originalPaymentInfoAndStatus;
+
     public function __construct(public XmlReader $xmlReader) {}
 
     public static function fromXml(string $xml): self
@@ -22,6 +24,7 @@ class Pain00200103
 
         $report->groupHeader = GroupHeader::fromXmlReader($report->xmlReader);
         $report->originalGroupInfoAndStatus = OriginalGroupInfoAndStatus::fromXmlReader($report->xmlReader);
+        $report->originalPaymentInfoAndStatus = OriginalPaymentInfoAndStatus::fromXmlReader($report->xmlReader);
 
         return $report;
     }
