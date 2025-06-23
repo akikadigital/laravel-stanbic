@@ -2,7 +2,7 @@
 
 namespace Akika\LaravelStanbic;
 
-use Akika\LaravelStanbic\Commands\LaravelStanbicCommand;
+use Akika\LaravelStanbic\Commands\ReadStatusReportsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -18,6 +18,6 @@ class LaravelStanbicServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-stanbic')
             ->hasConfigFile()
-            ->hasCommand(LaravelStanbicCommand::class);
+            ->hasCommand(ReadStatusReportsCommand::class);
     }
 }
