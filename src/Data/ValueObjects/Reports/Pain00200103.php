@@ -3,7 +3,6 @@
 namespace Akika\LaravelStanbic\Data\ValueObjects\Reports;
 
 use Akika\LaravelStanbic\Enums\GroupStatusType;
-use Carbon\Carbon;
 use Saloon\XmlWrangler\XmlReader;
 
 /**
@@ -21,36 +20,10 @@ class Pain00200103
     {
         $report = new self(XmlReader::fromString($xml));
 
-        $report->setOriginalGroupInfoAndStatus();
-        $report->setGroupHeader();
+        $report->groupHeader = GroupHeader::fromXmlReader($report->xmlReader);
+        $report->originalGroupInfoAndStatus = OriginalGroupInfoAndStatus::fromXmlReader($report->xmlReader);
 
         return $report;
-    }
-
-    public function setGroupHeader(): void
-    {
-        /** @var string $messageId */
-        $messageId = $this->xmlReader->value('CstmrPmtStsRpt.GrpHdr.MsgId')->sole();
-        /** @var string $creditDateTime */
-        $creditDateTime = $this->xmlReader->value('CstmrPmtStsRpt.GrpHdr.creditDateTime')->sole();
-        /** @var string $initiatingPartyName */
-        $initiatingPartyName = $this->xmlReader->value('CstmrPmtStsRpt.GrpHdr.InitgPty.Nm')->sole();
-        /** @var string $initiatingPartyBicOrBei */
-        $initiatingPartyBicOrBei = $this->xmlReader->value('CstmrPmtStsRpt.GrpHdr.InitgPty.Id.OrgId.BICOrBEI')->sole();
-
-        $this->groupHeader = new GroupHeader(
-            $messageId,
-            Carbon::parse($creditDateTime),
-            $initiatingPartyName,
-            $initiatingPartyBicOrBei,
-        );
-    }
-
-    public function setOriginalGroupInfoAndStatus(): void
-    {
-        /** @var array<string, string> $groupInfoAndStatus */
-        $groupInfoAndStatus = $this->xmlReader->value('CstmrPmtStsRpt.OrgnlGrpInfAndSts')->sole();
-        $this->originalGroupInfoAndStatus = OriginalGroupInfoAndStatus::fromArray($groupInfoAndStatus);
     }
 
     public function getGroupStatus(): GroupStatusType
