@@ -11,6 +11,9 @@ use Illuminate\Support\Str;
 use Saloon\XmlWrangler\XmlWriter;
 use ValueError;
 
+/**
+ * Initiates a customer credit transfer
+ */
 class Pain00100103
 {
     private string $xmlns = 'urn:iso:std:iso:20022:tech:xsd:pain.001.001.03';
