@@ -6,6 +6,8 @@ use Akika\LaravelStanbic\Data\ValueObjects\CustomerCreditTransferInitiation;
 use Akika\LaravelStanbic\Data\ValueObjects\Document;
 use Akika\LaravelStanbic\Data\ValueObjects\GroupHeader;
 use Akika\LaravelStanbic\Data\ValueObjects\PaymentInfo;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Saloon\XmlWrangler\XmlWriter;
 use ValueError;
 
@@ -54,5 +56,21 @@ class Pain00100103
         $this->paymentInfo = $paymentInfo;
 
         return $this;
+    }
+
+    public function store(?string $path = null): ?string
+    {
+
+        $ulid = Str::ulid()->toString();
+        $path ??= "PAIN_001_001_03_{$ulid}.xml";
+
+        /** @var string */
+        $disk = config('stanbic.disk');
+
+        if (! Storage::disk($disk)->put($path, $this->build())) {
+            return null;
+        }
+
+        return $path;
     }
 }

@@ -12,11 +12,16 @@ use Akika\LaravelStanbic\Enums\CountryCode;
 use Akika\LaravelStanbic\Enums\Currency;
 use Akika\LaravelStanbic\Enums\InstructionPriority;
 use Akika\LaravelStanbic\Tests\TestCase;
+use Illuminate\Support\Facades\Storage;
 
 class Pain00100103Test extends TestCase
 {
     public function test_can_build_xml_for_local_domestic_payments(): void
     {
+        /** @var string */
+        $disk = config('stanbic.disk');
+        Storage::fake($disk);
+
         $groupHeader = GroupHeader::make()
             ->setMessageId(fake()->uuid())
             ->setCreationDate(now())
@@ -42,13 +47,11 @@ class Pain00100103Test extends TestCase
             ->setDebtorAccount(fake()->uuid(), fake()->randomElement(Currency::cases()))
             ->setCreditTransferTransactionInfo($transactionInfo);
 
-        $payment = Pain00100103::make()
+        $path = Pain00100103::make()
             ->setGroupHeader($groupHeader)
-            ->setPaymentInfo($paymentInfo);
+            ->setPaymentInfo($paymentInfo)
+            ->store();
 
-        // echo $payment->build();
-        // dd($payment->build());
-
-        $this->markTestIncomplete();
+        Storage::disk($disk)->assertExists($path);
     }
 }
