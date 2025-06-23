@@ -5,6 +5,7 @@ namespace Akika\LaravelStanbic\Data\AggregateRoots;
 use Akika\LaravelStanbic\Data\ValueObjects\CustomerCreditTransferInitiation;
 use Akika\LaravelStanbic\Data\ValueObjects\Document;
 use Akika\LaravelStanbic\Data\ValueObjects\GroupHeader;
+use Akika\LaravelStanbic\Data\ValueObjects\PaymentInfo;
 use Saloon\XmlWrangler\XmlWriter;
 use ValueError;
 
@@ -18,13 +19,15 @@ class Pain00100103
 
     public ?GroupHeader $groupHeader;
 
+    public ?PaymentInfo $paymentInfo;
+
     public function build(): string
     {
-        if (! $this->groupHeader) {
+        if (! $this->groupHeader || ! $this->paymentInfo) {
             throw new ValueError;
         }
 
-        $this->customerCreditTransferInitiation = new CustomerCreditTransferInitiation($this->groupHeader);
+        $this->customerCreditTransferInitiation = new CustomerCreditTransferInitiation($this->groupHeader, $this->paymentInfo);
 
         $document = new Document($this->xmlns, $this->xmlnsXsi);
 
@@ -36,12 +39,19 @@ class Pain00100103
 
     public static function make(): self
     {
-        return new Pain00100103;
+        return new self;
     }
 
     public function setGroupHeader(GroupHeader $groupHeader): self
     {
         $this->groupHeader = $groupHeader;
+
+        return $this;
+    }
+
+    public function setPaymentInfo(PaymentInfo $paymentInfo): self
+    {
+        $this->paymentInfo = $paymentInfo;
 
         return $this;
     }

@@ -6,7 +6,7 @@ class CustomerCreditTransferInitiation
 {
     public function __construct(
         public GroupHeader $groupHeader,
-        // public PaymentInfo $paymentInfo
+        public PaymentInfo $paymentInfo
     ) {}
 
     public function getName(): string
@@ -19,7 +19,7 @@ class CustomerCreditTransferInitiation
     {
         return [$this->getName() => [
             ...$this->groupHeader->getElement(),
-            // ...$this->paymentInfo->getElement(),
+            ...$this->paymentInfo->getElement(),
         ]];
     }
 }

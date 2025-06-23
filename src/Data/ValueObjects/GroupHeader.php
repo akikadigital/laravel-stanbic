@@ -48,7 +48,7 @@ class GroupHeader extends XmlValueObject
 
     public static function make(): self
     {
-        return new GroupHeader;
+        return new self;
     }
 
     public function setMessageId(string $messageId): self
