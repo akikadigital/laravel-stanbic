@@ -2,6 +2,8 @@
 
 namespace Akika\LaravelStanbic\Actions;
 
+use Akika\LaravelStanbic\Data\ValueObjects\Reports\Pain00200103;
+use Akika\LaravelStanbic\Events\Pain00200103ReportReceived;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 
@@ -21,7 +23,19 @@ class ReadStatusReportsAction
         $this->reportPaths = $this->getValidReportPaths();
     }
 
-    public function handle(): void {}
+    public function handle(): void
+    {
+        $this->reportPaths->each(function (string $path) {
+            $contents = Storage::disk($this->disk)->get($path);
+            if (! $contents) {
+                return;
+            }
+
+            $report = Pain00200103::fromXml($contents);
+
+            dispatch(new Pain00200103ReportReceived($report));
+        });
+    }
 
     /** @return Collection<int, string> */
     public function getValidReportPaths(): Collection
