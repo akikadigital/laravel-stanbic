@@ -46,7 +46,7 @@ class Pain00100103Test extends TestCase
             ->setGroupHeader($groupHeader)
             ->setPaymentInfo($paymentInfo);
 
-        echo $payment->build();
+        // echo $payment->build();
         // dd($payment->build());
 
         $this->markTestIncomplete();
