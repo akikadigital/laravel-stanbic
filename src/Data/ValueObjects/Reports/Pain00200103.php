@@ -10,19 +10,23 @@ use Saloon\XmlWrangler\XmlReader;
  */
 class Pain00200103
 {
+    public OriginalGroupInfoAndStatus $originalGroupInfoAndStatus;
+
     public function __construct(public XmlReader $xmlReader) {}
 
     public static function fromXml(string $xml): self
     {
-        return new self(XmlReader::fromString($xml));
+        $report = new self(XmlReader::fromString($xml));
+
+        /** @var array<string, string> $groupInfoAndStatus */
+        $groupInfoAndStatus = $report->xmlReader->value('CstmrPmtStsRpt.OrgnlGrpInfAndSts')->sole();
+        $report->originalGroupInfoAndStatus = OriginalGroupInfoAndStatus::fromArray($groupInfoAndStatus);
+
+        return $report;
     }
 
     public function getGroupStatus(): GroupStatusType
     {
-        /** @var string $value */
-        $value = $this->xmlReader->value('CstmrPmtStsRpt.OrgnlGrpInfAndSts.GrpSts')->sole();
-        $type = GroupStatusType::from($value);
-
-        return $type;
+        return $this->originalGroupInfoAndStatus->groupStatus;
     }
 }
