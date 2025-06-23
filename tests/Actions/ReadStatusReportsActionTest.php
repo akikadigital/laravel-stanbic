@@ -6,6 +6,7 @@ use Akika\LaravelStanbic\Actions\ReadStatusReportsAction;
 use Akika\LaravelStanbic\Events\Pain00200103ReportReceived;
 use Akika\LaravelStanbic\Tests\HasSampleFiles;
 use Akika\LaravelStanbic\Tests\TestCase;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Storage;
 
@@ -69,5 +70,23 @@ class ReadStatusReportsActionTest extends TestCase
         });
 
         $this->assertEquals('20027226', $event->report->groupHeader->messageId);
+    }
+
+    public function test_can_get_file_from_disk(): void
+    {
+        $action = new ReadStatusReportsAction;
+
+        $contents = $action->getFileContents('REPORT_01.xml');
+
+        $this->assertNotNull($contents);
+    }
+
+    public function test_throw_exception_if_file_cannot_be_read(): void
+    {
+        $action = new ReadStatusReportsAction;
+
+        $this->expectException(FileNotFoundException::class);
+
+        $action->getFileContents(fake()->uuid().'.xml');
     }
 }

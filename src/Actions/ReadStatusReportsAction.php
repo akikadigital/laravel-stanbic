@@ -4,6 +4,7 @@ namespace Akika\LaravelStanbic\Actions;
 
 use Akika\LaravelStanbic\Data\ValueObjects\Reports\Pain00200103;
 use Akika\LaravelStanbic\Events\Pain00200103ReportReceived;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 
@@ -26,10 +27,7 @@ class ReadStatusReportsAction
     public function handle(): void
     {
         $this->reportPaths->each(function (string $path) {
-            $contents = Storage::disk($this->disk)->get($path);
-            if (! $contents) {
-                return;
-            }
+            $contents = $this->getFileContents($path);
 
             $report = Pain00200103::fromXml($contents);
 
@@ -47,15 +45,22 @@ class ReadStatusReportsAction
         $validReportPaths = collect($allFiles)
             ->filter(fn (string $path) => str_contains(strtolower($path), '.xml'))
             ->filter(function (string $path) {
-                $contents = Storage::disk($this->disk)->get($path);
-                if (! $contents) {
-                    return false;
-                }
+                $contents = $this->getFileContents($path);
 
                 return str_contains($contents, 'pain.002.001.03');
             })
             ->flatten();
 
         return $validReportPaths;
+    }
+
+    public function getFileContents(string $path): string
+    {
+        $contents = Storage::disk($this->disk)->get($path);
+        if (! $contents) {
+            throw new FileNotFoundException;
+        }
+
+        return $contents;
     }
 }
