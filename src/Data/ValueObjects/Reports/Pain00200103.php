@@ -2,6 +2,7 @@
 
 namespace Akika\LaravelStanbic\Data\ValueObjects\Reports;
 
+use Akika\LaravelStanbic\Enums\GroupStatusType;
 use Saloon\XmlWrangler\XmlReader;
 
 /**
@@ -9,13 +10,19 @@ use Saloon\XmlWrangler\XmlReader;
  */
 class Pain00200103
 {
-    public ?XmlReader $xmlReader = null;
+    public function __construct(public XmlReader $xmlReader) {}
 
     public static function fromXml(string $xml): self
     {
-        $report = new self;
-        $report->xmlReader = XmlReader::fromString($xml);
+        return new self(XmlReader::fromString($xml));
+    }
 
-        return $report;
+    public function getGroupStatus(): GroupStatusType
+    {
+        /** @var string $value */
+        $value = $this->xmlReader->value('CstmrPmtStsRpt.OrgnlGrpInfAndSts.GrpSts')->sole();
+        $type = GroupStatusType::from($value);
+
+        return $type;
     }
 }

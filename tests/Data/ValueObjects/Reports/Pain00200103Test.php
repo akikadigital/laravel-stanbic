@@ -3,6 +3,7 @@
 namespace Akika\LaravelStanbic\Tests\Data\ValueObjects\Reports;
 
 use Akika\LaravelStanbic\Data\ValueObjects\Reports\Pain00200103;
+use Akika\LaravelStanbic\Enums\GroupStatusType;
 use Akika\LaravelStanbic\Tests\TestCase;
 
 class Pain00200103Test extends TestCase
@@ -14,6 +15,13 @@ class Pain00200103Test extends TestCase
         $expectedOrgMsgId = 'DPTS001';
         $orgMsgId = $report->xmlReader->value('CstmrPmtStsRpt.OrgnlGrpInfAndSts.OrgnlMsgId')->sole();
         $this->assertEquals($expectedOrgMsgId, $orgMsgId);
+    }
+
+    public function test_can_get_group_status(): void
+    {
+        $report = Pain00200103::fromXml(self::ACK);
+
+        $this->assertEquals(GroupStatusType::Rcvd, $report->getGroupStatus());
     }
 
     public const ACK = "<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
