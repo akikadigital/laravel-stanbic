@@ -27,7 +27,7 @@ class Amount extends XmlValueObject
     {
         return [$this->getName() => [
             'InstdAmt' => [
-                Element::make()->setAttributes($this->getAttributes()),
+                Element::make($this->instructedAmount)->setAttributes($this->getAttributes()),
             ],
         ]];
     }
