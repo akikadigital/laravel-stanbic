@@ -24,7 +24,11 @@ trait HasSampleFiles
     public function basePath(string $path = ''): string
     {
         $orchestraPath = '/vendor/orchestra/testbench-core/laravel';
-        $root = str_replace($orchestraPath, '', base_path());
+        $orchestraPathWin = '\vendor\orchestra\testbench-core\laravel';
+
+        $root = base_path();
+        $root = str_replace($orchestraPath, '', $root);
+        $root = str_replace($orchestraPathWin, '', $root);
 
         return $root."/{$path}";
     }
