@@ -7,7 +7,9 @@ An unofficial package for Stanbic bank; following the ISO20022 standard.
 
 ## Installation
 
-You can install the package via composer:
+Configure `sftp` first before you proceed: https://laravel.com/docs/12.x/filesystem#sftp-driver-configuration
+
+Then install the package via composer:
 
 ```bash
 composer require akika/laravel-stanbic
@@ -21,6 +23,8 @@ In your `.env`, configure which filesystem disk we will read and write the payme
 
 ```shell
 STANBIC_FILESYSTEM_DISK=sftp
+STANBIC_INPUT_ROOT="Input"
+STANBIC_OUTPUT_ROOT="Output"
 ```
 
 You can publish the config file with:

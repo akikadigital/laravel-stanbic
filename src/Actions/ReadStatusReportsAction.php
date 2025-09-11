@@ -38,8 +38,11 @@ class ReadStatusReportsAction
     /** @return Collection<int, string> */
     public function getValidReportPaths(): Collection
     {
+        /** @var string */
+        $root = config('stanbic.input_root');
+
         /** @var array<int, string> */
-        $allFiles = Storage::disk($this->disk)->allFiles();
+        $allFiles = Storage::disk($this->disk)->allFiles($root);
 
         /** @var Collection<int, string> */
         $validReportPaths = collect($allFiles)

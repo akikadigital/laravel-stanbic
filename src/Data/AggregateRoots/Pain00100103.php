@@ -69,7 +69,10 @@ class Pain00100103
         /** @var string */
         $disk = config('stanbic.disk');
 
-        if (! Storage::disk($disk)->put($path, $this->build())) {
+        /** @var string */
+        $root = config('stanbic.output_root');
+
+        if (! Storage::disk($disk)->put("{$root}/{$path}", $this->build())) {
             return null;
         }
 
