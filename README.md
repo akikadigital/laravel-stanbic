@@ -5,11 +5,26 @@
 
 An unofficial package for Stanbic bank; following the ISO20022 standard.
 
-## Installation
+## Prerequisites
 
 Configure `sftp` first before you proceed: https://laravel.com/docs/12.x/filesystem#sftp-driver-configuration
 
-Then install the package via composer:
+Add the SFTP configs in the `config/filesystem.php`. Below is the recommended set of configs. Ensure you set the corresponding env values in your `.env` as well:
+
+```php
+'sftp' => [
+    'driver' => 'sftp',
+    'host' => env('SFTP_HOST'),
+    'port' => (int) env('SFTP_PORT', 22),
+    'username' => env('SFTP_USERNAME'),
+    'privateKey' => env('SFTP_PRIVATE_KEY'),
+    'throw' => true,
+],
+```
+
+## Installation
+
+You can install the package via composer:
 
 ```bash
 composer require akika/laravel-stanbic
