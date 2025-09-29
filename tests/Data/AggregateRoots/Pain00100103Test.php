@@ -11,6 +11,7 @@ use Akika\LaravelStanbic\Enums\ChargeBearerType;
 use Akika\LaravelStanbic\Enums\CountryCode;
 use Akika\LaravelStanbic\Enums\Currency;
 use Akika\LaravelStanbic\Enums\InstructionPriority;
+use Akika\LaravelStanbic\Enums\PaymentMethod;
 use Akika\LaravelStanbic\Tests\TestCase;
 use Illuminate\Support\Facades\Storage;
 
@@ -22,35 +23,63 @@ class Pain00100103Test extends TestCase
         $disk = config('stanbic.disk');
         Storage::fake($disk);
 
+        $messageId = fake()->uuid();
+        $companyName = fake()->company();
+        $companyAcNo = fake()->randomNumber(8, true);
+        $amount = fake()->numberBetween(10_000, 99_999);
+
+        $paymentId = fake()->uuid();
+        $instructionId = fake()->uuid();
+        $bankCode = '190101';
+        $bank = 'Stanbic Bank Ghana Ltd';
+        $beneficiaryName = fake()->name();
+        $beneficiaryAcNo = fake()->randomNumber(8, true);
+        $paymentDescription = fake()->words(3, true);
+
+        $paymentInfoId = fake()->uuid();
+        $companyAcNo = fake()->randomNumber(8, true);
+
+        // 1. Create group header
         $groupHeader = GroupHeader::make()
-            ->setMessageId(fake()->uuid())
+            ->setMessageId($messageId)
             ->setCreationDate(now())
-            ->setNumberOfTransactions(fake()->randomNumber())
-            ->setControlSum(fake()->randomFloat())
-            ->setInitiatingParty(fake()->company(), fake()->sentence());
+            ->setNumberOfTransactions(1)
+            ->setControlSum($amount)
+            ->setInitiatingParty($companyName, $companyAcNo);
 
+        // 2. Create transaction info
         $transactionInfo = CreditTransferTransactionInfo::make()
-            ->setPaymentId(fake()->uuid(), fake()->uuid())
-            ->setAmount(fake()->randomNumber(), fake()->randomElement(Currency::cases()))
-            ->setChargeBearer(ChargeBearerType::Debt)
-            ->setCreditorAgent(fake()->randomNumber(), 'STANDARD BANK SA', new PostalAddress(countryCode: CountryCode::SouthAfrica))
-            ->setCreditor(fake()->name(), new PostalAddress(streetName: fake()->streetName(), countryCode: CountryCode::SouthAfrica))
-            ->setCreditorAccount(fake()->randomNumber())
-            ->setRemittanceInfo('Domestic Payment');
+            ->setPaymentId($paymentId, $instructionId)
+            ->setAmount($amount, Currency::Cedi)
+            ->setCreditorAgent($bankCode, $bank, new PostalAddress(countryCode: CountryCode::Ghana))
+            ->setCreditor($beneficiaryName, new PostalAddress(
+                fake()->streetName(),
+                fake()->buildingNumber(),
+                fake()->postcode(),
+                fake()->city(),
+                CountryCode::Ghana,
+            ))
+            ->setCreditorAccount($beneficiaryAcNo)
+            ->setRemittanceInfo($paymentDescription);
 
+        // 3. Create payment info
         $paymentInfo = PaymentInfo::make()
-            ->setPaymentInfoId(fake()->uuid())
+            ->setPaymentInfoId($paymentInfoId)
+            ->setPaymentMethod(PaymentMethod::CreditTransfer)
             ->setBatchBooking(true)
-            ->setPaymentTypeInfo(InstructionPriority::Norm, 63)
+            ->setPaymentTypeInfo(InstructionPriority::Norm)
             ->setRequestedExecutionDate(now())
-            ->setDebtor(fake()->company())
-            ->setDebtorAccount(fake()->uuid(), fake()->randomElement(Currency::cases()))
+            ->setDebtor($companyName, new PostalAddress(countryCode: CountryCode::Ghana))
+            ->setDebtorAccount($companyAcNo, Currency::Cedi)
+            ->setDebtorAgent($bankCode)
+            ->setChargeBearer(ChargeBearerType::Debt)
             ->setCreditTransferTransactionInfo($transactionInfo);
 
+        // 4. Generate and store XML
         $path = Pain00100103::make()
             ->setGroupHeader($groupHeader)
             ->setPaymentInfo($paymentInfo)
-            ->store();
+            ->store(); // Returns the stored file path
 
         Storage::disk($disk)->assertExists($path);
     }
