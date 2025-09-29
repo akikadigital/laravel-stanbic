@@ -2,10 +2,7 @@
 
 namespace Akika\LaravelStanbic\Data\ValueObjects;
 
-/**
- * Receiving bank
- */
-class CreditorAgent extends XmlValueObject
+class DebtorAgent extends XmlValueObject
 {
     public function __construct(
         public ClearingSystemMemberId $clearingSystemMemberId,
@@ -15,7 +12,7 @@ class CreditorAgent extends XmlValueObject
 
     public function getName(): string
     {
-        return 'CdtrAgt';
+        return 'DbtrAgt';
     }
 
     /** @return array<string, array<string, mixed>> */

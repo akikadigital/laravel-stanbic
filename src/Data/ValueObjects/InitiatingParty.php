@@ -20,9 +20,11 @@ class InitiatingParty extends XmlValueObject
     {
         return [$this->getName() => [
             'Nm' => $this->name,
-            'OrgId' => [
-                'Othr' => [
-                    'Id' => $this->id,
+            'Id' => [
+                'OrgId' => [
+                    'Othr' => [
+                        'Id' => $this->id,
+                    ],
                 ],
             ],
         ]];

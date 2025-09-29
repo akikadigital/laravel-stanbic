@@ -81,11 +81,14 @@ class CreditTransferTransactionInfo extends XmlValueObject
 
     /**
      * @param  string  $memberId  The bank's branch code
-     * @param  string  $name  The bank's name
-     * @param  PostalAddress  $postalAddress  The bank's postal address
+     * @param  ?string  $name  The bank's name
+     * @param  ?PostalAddress  $postalAddress  The bank's postal address
      */
-    public function setCreditorAgent(string $memberId, string $name, PostalAddress $postalAddress): self
-    {
+    public function setCreditorAgent(
+        string $memberId,
+        ?string $name = null,
+        ?PostalAddress $postalAddress = null,
+    ): self {
         $this->creditorAgent = new CreditorAgent(
             new ClearingSystemMemberId($memberId),
             $name,

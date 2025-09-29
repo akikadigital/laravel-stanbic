@@ -18,10 +18,8 @@ class Creditor extends XmlValueObject
     public function getElement(): array
     {
         return [$this->getName() => [
-            'FinInstnId' => [
-                'Nm' => $this->name,
-                ...$this->postalAddress->getElement(),
-            ],
+            'Nm' => $this->name,
+            ...$this->postalAddress->getElement(),
         ]];
     }
 }

@@ -21,6 +21,8 @@ class PaymentInfo extends XmlValueObject
 
     public ?DebtorAccount $debtorAccount = null;
 
+    public ?DebtorAgent $debtorAgent = null;
+
     public ?CreditTransferTransactionInfo $creditTransferTransactionInfo = null;
 
     public function getName(): string
@@ -50,6 +52,7 @@ class PaymentInfo extends XmlValueObject
             ...$this->requestedExecutionDate->getElement(),
             ...$this->debtor->getElement(),
             ...$this->debtorAccount->getElement(),
+            ...($this->debtorAgent?->getElement() ?? []),
             ...$this->creditTransferTransactionInfo->getElement(),
         ]];
     }
@@ -97,6 +100,25 @@ class PaymentInfo extends XmlValueObject
     public function setDebtorAccount(string $id, Currency $currency): self
     {
         $this->debtorAccount = new DebtorAccount($id, $currency);
+
+        return $this;
+    }
+
+    /**
+     * @param  string  $memberId  The bank's branch code
+     * @param  ?string  $name  The bank's name
+     * @param  ?PostalAddress  $postalAddress  The bank's postal address
+     */
+    public function setDebtorAgent(
+        string $memberId,
+        ?string $name = null,
+        ?PostalAddress $postalAddress = null,
+    ): self {
+        $this->debtorAgent = new DebtorAgent(
+            new ClearingSystemMemberId($memberId),
+            $name,
+            $postalAddress,
+        );
 
         return $this;
     }
