@@ -6,7 +6,7 @@ class Creditor extends XmlValueObject
 {
     public function __construct(
         public string $name,
-        public PostalAddress $postalAddress,
+        public ?PostalAddress $postalAddress = null,
     ) {}
 
     public function getName(): string
@@ -17,9 +17,15 @@ class Creditor extends XmlValueObject
     /** @return array<string, array<string, mixed>> */
     public function getElement(): array
     {
-        return [$this->getName() => [
-            'Nm' => $this->name,
-            ...$this->postalAddress->getElement(),
-        ]];
+        $body = ['Nm' => $this->name];
+
+        if ($this->postalAddress) {
+            $body = [
+                ...$body,
+                ...$this->postalAddress->getElement(),
+            ];
+        }
+
+        return [$this->getName() => $body];
     }
 }

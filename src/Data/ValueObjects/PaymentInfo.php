@@ -106,9 +106,9 @@ class PaymentInfo extends XmlValueObject
         return $this;
     }
 
-    public function setDebtor(string $name): self
+    public function setDebtor(string $name, ?PostalAddress $postalAddress = null): self
     {
-        $this->debtor = new Debtor($name);
+        $this->debtor = new Debtor($name, $postalAddress);
 
         return $this;
     }
