@@ -2,7 +2,6 @@
 
 namespace Akika\LaravelStanbic\Data\ValueObjects;
 
-use Akika\LaravelStanbic\Enums\ChargeBearerType;
 use Akika\LaravelStanbic\Enums\Currency;
 use ValueError;
 
@@ -11,8 +10,6 @@ class CreditTransferTransactionInfo extends XmlValueObject
     public ?PaymentId $paymentId = null;
 
     public ?Amount $amount = null;
-
-    public ?ChargeBearer $chargeBearer = null;
 
     public ?CreditorAgent $creditorAgent = null;
 
@@ -33,7 +30,6 @@ class CreditTransferTransactionInfo extends XmlValueObject
         if (
             ! $this->paymentId ||
             ! $this->amount ||
-            ! $this->chargeBearer ||
             ! $this->creditorAgent ||
             ! $this->creditor ||
             ! $this->creditorAccount ||
@@ -45,7 +41,6 @@ class CreditTransferTransactionInfo extends XmlValueObject
         return [$this->getName() => [
             ...$this->paymentId->getElement(),
             ...$this->amount->getElement(),
-            ...$this->chargeBearer->getElement(),
             ...$this->creditorAgent->getElement(),
             ...$this->creditor->getElement(),
             ...$this->creditorAccount->getElement(),
@@ -68,13 +63,6 @@ class CreditTransferTransactionInfo extends XmlValueObject
     public function setAmount(int $amount, Currency $currency): self
     {
         $this->amount = new Amount($amount, $currency);
-
-        return $this;
-    }
-
-    public function setChargeBearer(ChargeBearerType $chargeBearerType): self
-    {
-        $this->chargeBearer = new ChargeBearer($chargeBearerType);
 
         return $this;
     }

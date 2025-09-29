@@ -2,14 +2,18 @@
 
 namespace Akika\LaravelStanbic\Data\ValueObjects;
 
+use Akika\LaravelStanbic\Enums\ChargeBearerType;
 use Akika\LaravelStanbic\Enums\Currency;
 use Akika\LaravelStanbic\Enums\InstructionPriority;
+use Akika\LaravelStanbic\Enums\PaymentMethod as PaymentMethodEnum;
 use Carbon\Carbon;
 use ValueError;
 
 class PaymentInfo extends XmlValueObject
 {
     public ?PaymentInfoId $paymentInfoId = null;
+
+    public ?PaymentMethod $paymentMethod = null;
 
     public ?BatchBooking $batchBooking = null;
 
@@ -22,6 +26,8 @@ class PaymentInfo extends XmlValueObject
     public ?DebtorAccount $debtorAccount = null;
 
     public ?DebtorAgent $debtorAgent = null;
+
+    public ?ChargeBearer $chargeBearer = null;
 
     public ?CreditTransferTransactionInfo $creditTransferTransactionInfo = null;
 
@@ -40,6 +46,7 @@ class PaymentInfo extends XmlValueObject
             ! $this->requestedExecutionDate ||
             ! $this->debtor ||
             ! $this->debtorAccount ||
+            ! $this->chargeBearer ||
             ! $this->creditTransferTransactionInfo
         ) {
             throw new ValueError;
@@ -47,12 +54,14 @@ class PaymentInfo extends XmlValueObject
 
         return [$this->getName() => [
             ...$this->paymentInfoId->getElement(),
+            ...($this->paymentMethod?->getElement() ?? []),
             ...$this->batchBooking->getElement(),
             ...$this->paymentTypeInfo->getElement(),
             ...$this->requestedExecutionDate->getElement(),
             ...$this->debtor->getElement(),
             ...$this->debtorAccount->getElement(),
             ...($this->debtorAgent?->getElement() ?? []),
+            ...$this->chargeBearer->getElement(),
             ...$this->creditTransferTransactionInfo->getElement(),
         ]];
     }
@@ -65,6 +74,13 @@ class PaymentInfo extends XmlValueObject
     public function setPaymentInfoId(string $id): self
     {
         $this->paymentInfoId = new PaymentInfoId($id);
+
+        return $this;
+    }
+
+    public function setPaymentMethod(PaymentMethodEnum $paymentMethod): self
+    {
+        $this->paymentMethod = new PaymentMethod($paymentMethod);
 
         return $this;
     }
@@ -119,6 +135,13 @@ class PaymentInfo extends XmlValueObject
             $name,
             $postalAddress,
         );
+
+        return $this;
+    }
+
+    public function setChargeBearer(ChargeBearerType $chargeBearerType): self
+    {
+        $this->chargeBearer = new ChargeBearer($chargeBearerType);
 
         return $this;
     }
