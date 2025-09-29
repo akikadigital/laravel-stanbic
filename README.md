@@ -57,44 +57,104 @@ This package provides a Laravel implementation for generating ISO 20022 PAIN.001
 #### Basic Usage
 
 ```php
+<?php
+
+namespace App\Console\Commands;
+
 use Akika\LaravelStanbic\Data\AggregateRoots\Pain00100103;
+use Akika\LaravelStanbic\Data\ValueObjects\CreditTransferTransactionInfo;
 use Akika\LaravelStanbic\Data\ValueObjects\GroupHeader;
 use Akika\LaravelStanbic\Data\ValueObjects\PaymentInfo;
-use Akika\LaravelStanbic\Data\ValueObjects\CreditTransferTransactionInfo;
+use Akika\LaravelStanbic\Data\ValueObjects\PostalAddress;
+use Akika\LaravelStanbic\Enums\ChargeBearerType;
+use Akika\LaravelStanbic\Enums\CountryCode;
+use Akika\LaravelStanbic\Enums\Currency;
+use Akika\LaravelStanbic\Enums\InstructionPriority;
+use Akika\LaravelStanbic\Enums\PaymentMethod;
+use Illuminate\Console\Command;
 
-// 1. Create group header
-$groupHeader = GroupHeader::make()
-    ->setMessageId('unique-message-id')
-    ->setCreationDate(now())
-    ->setNumberOfTransactions(1)
-    ->setControlSum(1000.00)
-    ->setInitiatingParty('Your Company Name', 'Optional description');
+class DemoSinglePaymentCommand extends Command
+{
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'demo:single-payment';
 
-// 2. Create transaction info
-$transactionInfo = CreditTransferTransactionInfo::make()
-    ->setPaymentId('payment-id', 'instruction-id')
-    ->setAmount(1000.00, Currency::Rand)
-    ->setChargeBearer(ChargeBearerType::Debt)
-    ->setCreditorAgent('bank-code', 'STANDARD BANK SA', new PostalAddress(countryCode: CountryCode::SouthAfrica))
-    ->setCreditor('Beneficiary Name', new PostalAddress(streetName: 'Street Name', countryCode: CountryCode::SouthAfrica))
-    ->setCreditorAccount('beneficiary-account-number')
-    ->setRemittanceInfo('Payment description');
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Create a demo single payment';
 
-// 3. Create payment info
-$paymentInfo = PaymentInfo::make()
-    ->setPaymentInfoId('payment-info-id')
-    ->setBatchBooking(true)
-    ->setPaymentTypeInfo(InstructionPriority::Norm, 63)
-    ->setRequestedExecutionDate(now())
-    ->setDebtor('Your Company Name')
-    ->setDebtorAccount('your-account-number', Currency::Rand)
-    ->setCreditTransferTransactionInfo($transactionInfo);
+    /**
+     * Execute the console command.
+     */
+    public function handle()
+    {
+        $messageId = fake()->uuid();
+        $companyName = fake()->company();
+        $companyAcNo = fake()->randomNumber(8, true);
+        $amount = fake()->numberBetween(10_000, 99_999);
 
-// 4. Generate and store XML
-$filePath = Pain00100103::make()
-    ->setGroupHeader($groupHeader)
-    ->setPaymentInfo($paymentInfo)
-    ->store(); // Returns the stored file path
+        $paymentId = fake()->uuid();
+        $instructionId = fake()->uuid();
+        $bankCode = '190101';
+        $bank = 'Stanbic Bank Ghana Ltd';
+        $beneficiaryName = fake()->name();
+        $beneficiaryAcNo = fake()->randomNumber(8, true);
+        $paymentDescription = fake()->words(3, true);
+
+        $paymentInfoId = fake()->uuid();
+        $companyAcNo = fake()->randomNumber(8, true);
+
+        // 1. Create group header
+        $groupHeader = GroupHeader::make()
+            ->setMessageId($messageId)
+            ->setCreationDate(now())
+            ->setNumberOfTransactions(1)
+            ->setControlSum($amount)
+            ->setInitiatingParty($companyName, $companyAcNo);
+
+        // 2. Create transaction info
+        $transactionInfo = CreditTransferTransactionInfo::make()
+            ->setPaymentId($paymentId, $instructionId)
+            ->setAmount($amount, Currency::Cedi)
+            ->setCreditorAgent($bankCode, $bank, new PostalAddress(countryCode: CountryCode::Ghana))
+            ->setCreditor($beneficiaryName, new PostalAddress(
+                fake()->streetName(),
+                fake()->buildingNumber(),
+                fake()->postcode(),
+                fake()->city(),
+                CountryCode::Ghana,
+            ))
+            ->setCreditorAccount($beneficiaryAcNo)
+            ->setRemittanceInfo($paymentDescription);
+
+        // 3. Create payment info
+        $paymentInfo = PaymentInfo::make()
+            ->setPaymentInfoId($paymentInfoId)
+            ->setPaymentMethod(PaymentMethod::CreditTransfer)
+            ->setBatchBooking(true)
+            ->setPaymentTypeInfo(InstructionPriority::Norm)
+            ->setRequestedExecutionDate(now())
+            ->setDebtor($companyName, new PostalAddress(countryCode: CountryCode::Ghana))
+            ->setDebtorAccount($companyAcNo, Currency::Cedi)
+            ->setDebtorAgent($bankCode)
+            ->setChargeBearer(ChargeBearerType::Debt)
+            ->setCreditTransferTransactionInfo($transactionInfo);
+
+        // 4. Generate and store XML
+        $filePath = Pain00100103::make()
+            ->setGroupHeader($groupHeader)
+            ->setPaymentInfo($paymentInfo)
+            ->store(); // Returns the stored file path
+
+        $this->line("Saved to: \n\t{$filePath}");
+    }
+}
 ```
 
 -   The generated XML files follow the ISO 20022 PAIN.001.001.03 standard and are automatically stored with unique filenames.
