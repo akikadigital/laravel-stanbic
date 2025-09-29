@@ -11,7 +11,7 @@ use Akika\LaravelStanbic\Enums\InstructionPriority;
  */
 class PaymentTypeInfo extends XmlValueObject
 {
-    public function __construct(public readonly InstructionPriority $instructionPriority, public readonly int $propietaryCategoryCode) {}
+    public function __construct(public readonly InstructionPriority $instructionPriority, public readonly ?int $propietaryCategoryCode = null) {}
 
     public function getName(): string
     {
@@ -21,11 +21,14 @@ class PaymentTypeInfo extends XmlValueObject
     /** @return array<string, array<string, mixed>> */
     public function getElement(): array
     {
-        return [$this->getName() => [
-            'InstrPrty' => $this->instructionPriority->value,
-            'CtgyPurp' => [                                     // Category purpose of the payment
-                'Prtry' => $this->propietaryCategoryCode,
-            ],
-        ]];
+        $body = ['InstrPrty' => $this->instructionPriority->value];
+
+        if ($this->propietaryCategoryCode) {
+            // Category purpose of the payment
+            $body['CtgyPurp'] = ['Prtry' => $this->propietaryCategoryCode];
+        }
+
+        return [$this->getName() => $body];
+
     }
 }

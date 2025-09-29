@@ -73,7 +73,7 @@ class PaymentInfo extends XmlValueObject
         return $this;
     }
 
-    public function setPaymentTypeInfo(InstructionPriority $instructionPriority, int $propietaryCategoryCode): self
+    public function setPaymentTypeInfo(InstructionPriority $instructionPriority, ?int $propietaryCategoryCode = null): self
     {
         $this->paymentTypeInfo = new PaymentTypeInfo($instructionPriority, $propietaryCategoryCode);
 
