@@ -17,12 +17,12 @@ class BatchBooking extends XmlValueObject
 
     public function getName(): string
     {
-        return 'PmtInfId';
+        return 'BtchBookg';
     }
 
-    /** @return array<string, bool> */
+    /** @return array<string, string> */
     public function getElement(): array
     {
-        return [$this->getName() => $this->enabled];
+        return [$this->getName() => $this->enabled ? 'true' : 'false'];
     }
 }
