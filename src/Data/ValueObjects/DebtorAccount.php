@@ -19,7 +19,7 @@ class DebtorAccount extends XmlValueObject
         return [$this->getName() => [
             'Id' => [
                 'Othr' => [
-                    'id' => $this->id,
+                    'Id' => $this->id,
                 ],
             ],
             'Ccy' => $this->currency->value,
