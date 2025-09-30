@@ -4,6 +4,7 @@ namespace Akika\LaravelStanbic\Data\ValueObjects;
 
 class PaymentInfoId extends XmlValueObject
 {
+    /** @param string $id An alphanumeric id without any special chars */
     public function __construct(public readonly string $id) {}
 
     public function getName(): string

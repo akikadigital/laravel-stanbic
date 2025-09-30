@@ -71,6 +71,7 @@ class PaymentInfo extends XmlValueObject
         return new self;
     }
 
+    /** @param string $id An alphanumeric id without any special chars */
     public function setPaymentInfoId(string $id): self
     {
         $this->paymentInfoId = new PaymentInfoId($id);
