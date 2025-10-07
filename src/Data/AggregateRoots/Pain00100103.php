@@ -7,7 +7,6 @@ use Akika\LaravelStanbic\Data\ValueObjects\Document;
 use Akika\LaravelStanbic\Data\ValueObjects\GroupHeader;
 use Akika\LaravelStanbic\Data\ValueObjects\PaymentInfo;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 use Saloon\XmlWrangler\XmlWriter;
 use ValueError;
 
@@ -63,14 +62,20 @@ class Pain00100103
 
     public function store(?string $path = null): ?string
     {
-        $uuid = Str::uuid()->getHex()->toString();
-        $path ??= "PAIN_001_001_03_{$uuid}.xml";
-
         /** @var string */
         $disk = config('stanbic.disk');
 
         /** @var string */
+        $prefix = config('stanbic.output_file_prefix');
+
+        /** @var string */
         $root = config('stanbic.output_root');
+
+        // CINCH_CINCHH2H_Pain001v3_GH_TST_yyyymmddhhmmssSSS.xml
+        // Microseconds (u) has 6 chars, we need only 3 (SSS). so strip the last 3 chars
+        $filename = substr(now()->format('YmdHisu'), 0, -3);
+
+        $path ??= "{$prefix}{$filename}.xml";
 
         if (! Storage::disk($disk)->put("{$root}/{$path}", $this->build())) {
             return null;
