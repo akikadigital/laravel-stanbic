@@ -83,7 +83,7 @@ class GroupHeader extends XmlValueObject
      * @param  string  $name  Name of the initiating party
      * @param  string  $id  Identification of the initiating party
      */
-    public function setInitiatingParty(string $name, string $id): self
+    public function setInitiatingParty(?string $name, ?string $id): self
     {
         $this->initiatingParty = new InitiatingParty($name, $id);
 

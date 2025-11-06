@@ -8,7 +8,7 @@ class InitiatingParty extends XmlValueObject
      * @param  string  $name  Name of the initiating party
      * @param  string  $id  Identification of the initiating party
      */
-    public function __construct(public string $name, public string $id) {}
+    public function __construct(public ?string $name, public ?string $id) {}
 
     public function getName(): string
     {
@@ -18,15 +18,19 @@ class InitiatingParty extends XmlValueObject
     /** @return array<string, array<string, mixed>> */
     public function getElement(): array
     {
-        return [$this->getName() => [
-            'Nm' => $this->name,
-            'Id' => [
-                'OrgId' => [
-                    'Othr' => [
-                        'Id' => $this->id,
-                    ],
+        $body = [];
+        if ($this->name) {
+            $body['Nm'] = $this->name;
+        }
+
+        if ($this->id) {
+            $body['Id'] = ['OrgId' => [
+                'Othr' => [
+                    'Id' => $this->id,
                 ],
-            ],
-        ]];
+            ]];
+        }
+
+        return [$this->getName() => $body];
     }
 }
