@@ -6,6 +6,7 @@ use Akika\LaravelStanbic\Data\ValueObjects\CustomerCreditTransferInitiation;
 use Akika\LaravelStanbic\Data\ValueObjects\Document;
 use Akika\LaravelStanbic\Data\ValueObjects\GroupHeader;
 use Akika\LaravelStanbic\Data\ValueObjects\PaymentInfo;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 use Saloon\XmlWrangler\XmlWriter;
 use ValueError;
@@ -23,15 +24,21 @@ class Pain00100103
 
     public ?GroupHeader $groupHeader;
 
-    public ?PaymentInfo $paymentInfo;
+    /** @var Collection<int, PaymentInfo> */
+    public Collection $paymentInfos;
+
+    public function __construct()
+    {
+        $this->paymentInfos = collect();
+    }
 
     public function build(): string
     {
-        if (! $this->groupHeader || ! $this->paymentInfo) {
+        if (! $this->groupHeader || ! $this->paymentInfos->count()) {
             throw new ValueError;
         }
 
-        $this->customerCreditTransferInitiation = new CustomerCreditTransferInitiation($this->groupHeader, $this->paymentInfo);
+        $this->customerCreditTransferInitiation = new CustomerCreditTransferInitiation($this->groupHeader, $this->paymentInfos);
 
         $document = new Document($this->xmlns, $this->xmlnsXsi);
 
@@ -53,9 +60,9 @@ class Pain00100103
         return $this;
     }
 
-    public function setPaymentInfo(PaymentInfo $paymentInfo): self
+    public function addPaymentInfo(PaymentInfo $paymentInfo): self
     {
-        $this->paymentInfo = $paymentInfo;
+        $this->paymentInfos->push($paymentInfo);
 
         return $this;
     }

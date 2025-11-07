@@ -36,7 +36,7 @@ class PaymentInfo extends XmlValueObject
         return 'PmtInf';
     }
 
-    /** @return array<string, array<string, mixed>> */
+    /** @return array<string, mixed> */
     public function getElement(): array
     {
         if (
@@ -52,7 +52,7 @@ class PaymentInfo extends XmlValueObject
             throw new ValueError;
         }
 
-        return [$this->getName() => [
+        return [
             ...$this->paymentInfoId->getElement(),
             ...($this->paymentMethod?->getElement() ?? []),
             ...$this->batchBooking->getElement(),
@@ -63,7 +63,7 @@ class PaymentInfo extends XmlValueObject
             ...($this->debtorAgent?->getElement() ?? []),
             ...$this->chargeBearer->getElement(),
             ...$this->creditTransferTransactionInfo->getElement(),
-        ]];
+        ];
     }
 
     public static function make(): self
