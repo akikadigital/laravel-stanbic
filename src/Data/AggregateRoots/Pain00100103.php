@@ -22,7 +22,7 @@ class Pain00100103
 
     public ?CustomerCreditTransferInitiation $customerCreditTransferInitiation = null;
 
-    public ?GroupHeader $groupHeader;
+    public ?GroupHeader $groupHeader = null;
 
     /** @var Collection<int, PaymentInfo> */
     public Collection $paymentInfos;
@@ -38,7 +38,11 @@ class Pain00100103
             throw new ValueError;
         }
 
-        $this->customerCreditTransferInitiation = new CustomerCreditTransferInitiation($this->groupHeader, $this->paymentInfos);
+        $this->computeGroupHeaderTotals();
+
+        /** @var GroupHeader $groupHeader */
+        $groupHeader = $this->groupHeader;
+        $this->customerCreditTransferInitiation = new CustomerCreditTransferInitiation($groupHeader, $this->paymentInfos);
 
         $document = new Document($this->xmlns, $this->xmlnsXsi);
 
@@ -58,6 +62,21 @@ class Pain00100103
         $this->groupHeader = $groupHeader;
 
         return $this;
+    }
+
+    public function computeGroupHeaderTotals(): void
+    {
+        if ($this->groupHeader == null || ! $this->paymentInfos->count()) {
+            return;
+        }
+
+        $controlSum = (float) $this->paymentInfos->sum(function (PaymentInfo $paymentInfo) {
+            return $paymentInfo->creditTransferTransactionInfo?->amount->instructedAmount ?? 0;
+        });
+        $numberOfTransactions = $this->paymentInfos->count();
+
+        $this->groupHeader->setControlSum($controlSum);
+        $this->groupHeader->setNumberOfTransactions($numberOfTransactions);
     }
 
     public function addPaymentInfo(PaymentInfo $paymentInfo): self
