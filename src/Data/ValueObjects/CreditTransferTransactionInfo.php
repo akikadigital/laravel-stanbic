@@ -24,7 +24,7 @@ class CreditTransferTransactionInfo extends XmlValueObject
         return 'CdtTrfTxInf';
     }
 
-    /** @return array<string, array<string, mixed>> */
+    /** @return array<string, mixed> */
     public function getElement(): array
     {
         if (
@@ -38,14 +38,14 @@ class CreditTransferTransactionInfo extends XmlValueObject
             throw new ValueError;
         }
 
-        return [$this->getName() => [
+        return [
             ...$this->paymentId->getElement(),
             ...$this->amount->getElement(),
             ...$this->creditorAgent->getElement(),
             ...$this->creditor->getElement(),
             ...$this->creditorAccount->getElement(),
             ...$this->remittanceInfo->getElement(),
-        ]];
+        ];
     }
 
     public static function make(): self

@@ -7,6 +7,7 @@ use Akika\LaravelStanbic\Enums\Currency;
 use Akika\LaravelStanbic\Enums\InstructionPriority;
 use Akika\LaravelStanbic\Enums\PaymentMethod as PaymentMethodEnum;
 use Carbon\Carbon;
+use Illuminate\Support\Collection;
 use ValueError;
 
 class PaymentInfo extends XmlValueObject
@@ -29,7 +30,13 @@ class PaymentInfo extends XmlValueObject
 
     public ?ChargeBearer $chargeBearer = null;
 
-    public ?CreditTransferTransactionInfo $creditTransferTransactionInfo = null;
+    /** @var Collection<int, CreditTransferTransactionInfo> */
+    public Collection $creditTransferTransactionInfos;
+
+    public function __construct()
+    {
+        $this->creditTransferTransactionInfos = collect();
+    }
 
     public function getName(): string
     {
@@ -47,10 +54,15 @@ class PaymentInfo extends XmlValueObject
             ! $this->debtor ||
             ! $this->debtorAccount ||
             ! $this->chargeBearer ||
-            ! $this->creditTransferTransactionInfo
+            ! $this->creditTransferTransactionInfos->count()
         ) {
             throw new ValueError;
         }
+
+        $creditTransferTransactionInfoName = (new CreditTransferTransactionInfo)->getName();
+        $creditTransferTransactionInfos = $this->creditTransferTransactionInfos
+            ->map(fn (CreditTransferTransactionInfo $info) => $info->getElement())
+            ->all();
 
         return [
             ...$this->paymentInfoId->getElement(),
@@ -62,7 +74,7 @@ class PaymentInfo extends XmlValueObject
             ...$this->debtorAccount->getElement(),
             ...($this->debtorAgent?->getElement() ?? []),
             ...$this->chargeBearer->getElement(),
-            ...$this->creditTransferTransactionInfo->getElement(),
+            $creditTransferTransactionInfoName => $creditTransferTransactionInfos,
         ];
     }
 
@@ -147,10 +159,19 @@ class PaymentInfo extends XmlValueObject
         return $this;
     }
 
-    public function setCreditTransferTransactionInfo(CreditTransferTransactionInfo $creditTransferTransactionInfo): self
+    public function addCreditTransferTransactionInfo(CreditTransferTransactionInfo $creditTransferTransactionInfo): self
     {
-        $this->creditTransferTransactionInfo = $creditTransferTransactionInfo;
+        $this->creditTransferTransactionInfos->push($creditTransferTransactionInfo);
 
         return $this;
+    }
+
+    public function getCreditTransferTransactionInfoTotals(): float
+    {
+        $sum = (float) $this->creditTransferTransactionInfos->sum(function (CreditTransferTransactionInfo $info) {
+            return $info->amount->instructedAmount ?? 0;
+        });
+
+        return $sum;
     }
 }

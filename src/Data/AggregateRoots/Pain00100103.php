@@ -70,10 +70,15 @@ class Pain00100103
             return;
         }
 
-        $controlSum = (float) $this->paymentInfos->sum(function (PaymentInfo $paymentInfo) {
-            return $paymentInfo->creditTransferTransactionInfo?->amount->instructedAmount ?? 0;
+        // This accounts for multiple PmtInf with multiple CdtTrfTxInf in them
+        $controlSum = $this->paymentInfos->sum(function (PaymentInfo $paymentInfo) {
+            return $paymentInfo->getCreditTransferTransactionInfoTotals();
         });
-        $numberOfTransactions = $this->paymentInfos->count();
+
+        // This too accounts for multiple PmtInf with multiple CdtTrfTxInf in them
+        $numberOfTransactions = $this->paymentInfos->sum(function (PaymentInfo $paymentInfo) {
+            return $paymentInfo->creditTransferTransactionInfos->count();
+        });
 
         $this->groupHeader->setControlSum($controlSum);
         $this->groupHeader->setNumberOfTransactions($numberOfTransactions);
