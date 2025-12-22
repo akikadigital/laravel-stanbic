@@ -2,31 +2,45 @@
 
 namespace Akika\LaravelStanbic\Data\ValueObjects\Reports;
 
+use Illuminate\Support\Collection;
 use Saloon\XmlWrangler\XmlReader;
 
 class OriginalPaymentInfoAndStatus
 {
+    /** @param Collection<int, TransactionInfoAndStatus> $transactionInfoAndStatuses */
     public function __construct(
         public string $originalPaymentInfoId,
         public StatusReasonInfos $statusReasonInfos,
-        public TransactionInfoAndStatus $transactionInfoAndStatus,
+        public Collection $transactionInfoAndStatuses,
     ) {}
 
-    public static function fromXmlReader(XmlReader $reader): ?self
+    /** @return Collection<int, static> */
+    public static function fromXmlReader(XmlReader $reader): ?Collection
     {
         $root = '//CstmrPmtStsRpt/OrgnlPmtInfAndSts';
 
-        if (! $reader->xpathValue($root)->first()) {
+        $count = $reader->xpathValue($root)->collect()->count();
+
+        if (! $count) {
             return null;
         }
 
-        /** @var string */
-        $originalPaymentInfoId = $reader->xpathValue("{$root}/OrgnlPmtInfId")->sole();
+        /** @var Collection<int, static> */
+        $records = collect(range(0, $count - 1))
+            ->map(function (int $key) use ($reader, $root) {
+                $i = $key + 1;
+                $path = "{$root}[{$i}]";
 
-        $additionalStatusInfos = StatusReasonInfos::fromXmlReader($reader, $root);
+                /** @var string */
+                $originalPaymentInfoId = $reader->xpathValue("{$path}/OrgnlPmtInfId")->sole();
 
-        $transactionInfoAndStatus = TransactionInfoAndStatus::fromXmlReader($reader);
+                return new self(
+                    $originalPaymentInfoId,
+                    StatusReasonInfos::fromXmlReader($reader, $path),
+                    TransactionInfoAndStatus::fromXmlReader($reader, $path),
+                );
+            });
 
-        return new self($originalPaymentInfoId, $additionalStatusInfos, $transactionInfoAndStatus);
+        return $records;
     }
 }

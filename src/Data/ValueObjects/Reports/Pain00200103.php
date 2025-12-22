@@ -14,7 +14,8 @@ class Pain00200103
 
     public OriginalGroupInfoAndStatus $originalGroupInfoAndStatus;
 
-    public ?OriginalPaymentInfoAndStatus $originalPaymentInfoAndStatus;
+    /** @var Collection<int, OriginalPaymentInfoAndStatus> */
+    public ?Collection $originalPaymentInfoAndStatuses;
 
     public function __construct(public XmlReader $xmlReader) {}
 
@@ -24,7 +25,7 @@ class Pain00200103
 
         $report->groupHeader = GroupHeader::fromXmlReader($report->xmlReader);
         $report->originalGroupInfoAndStatus = OriginalGroupInfoAndStatus::fromXmlReader($report->xmlReader);
-        $report->originalPaymentInfoAndStatus = OriginalPaymentInfoAndStatus::fromXmlReader($report->xmlReader);
+        $report->originalPaymentInfoAndStatuses = OriginalPaymentInfoAndStatus::fromXmlReader($report->xmlReader);
 
         return $report;
     }
@@ -33,10 +34,16 @@ class Pain00200103
     public function getAllStatusReasons(): Collection
     {
         $reasons = $this->originalGroupInfoAndStatus->statusReasonInfos->additionalInfos;
-        if ($this->originalPaymentInfoAndStatus) {
-            $reasons = $reasons->merge($this->originalPaymentInfoAndStatus->statusReasonInfos->additionalInfos);
-            $reasons = $reasons->merge($this->originalPaymentInfoAndStatus->transactionInfoAndStatus->statusReasonInfos->additionalInfos);
-        }
+
+        $this->originalPaymentInfoAndStatuses?->each(function (OriginalPaymentInfoAndStatus $originalPaymentInfoAndStatus) use (&$reasons) {
+            $reasons = $reasons->merge($originalPaymentInfoAndStatus->statusReasonInfos->additionalInfos);
+
+            $originalPaymentInfoAndStatus
+                ->transactionInfoAndStatuses
+                ->each(function (TransactionInfoAndStatus $transactionInfoAndStatus) use (&$reasons) {
+                    $reasons = $reasons->merge($transactionInfoAndStatus->statusReasonInfos->additionalInfos);
+                });
+        });
 
         return $reasons;
     }

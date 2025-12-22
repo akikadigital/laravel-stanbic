@@ -3,6 +3,7 @@
 namespace Akika\LaravelStanbic\Data\ValueObjects\Reports;
 
 use Akika\LaravelStanbic\Enums\TransactionStatusType;
+use Illuminate\Support\Collection;
 use Saloon\XmlWrangler\XmlReader;
 
 class TransactionInfoAndStatus
@@ -14,26 +15,39 @@ class TransactionInfoAndStatus
         public StatusReasonInfos $statusReasonInfos,
     ) {}
 
-    public static function fromXmlReader(XmlReader $reader): self
+    /** @return Collection<int, static> */
+    public static function fromXmlReader(XmlReader $reader, string $root): Collection
     {
-        $root = '//CstmrPmtStsRpt/OrgnlPmtInfAndSts/TxInfAndSts';
+        $root = "{$root}/TxInfAndSts";
 
-        /** @var string */
-        $originalInstrumentId = $reader->xpathValue("{$root}/OrgnlInstrId")->sole();
+        $count = $reader->xpathValue($root)->collect()->count();
 
-        /** @var string */
-        $originalEndToEndId = $reader->xpathValue("{$root}/OrgnlEndToEndId")->sole();
+        /** @var Collection<int, static> */
+        $transactionInfos = collect(range(0, $count - 1))
+            ->map(function (int $key) use ($reader, $root) {
+                // XML arrays start at 1
+                $i = $key + 1;
+                $path = "{$root}[{$i}]";
 
-        /** @var string */
-        $status = $reader->xpathValue("{$root}/TxSts")->sole();
+                /** @var string */
+                $originalInstrumentId = $reader->xpathValue("{$path}/OrgnlInstrId")->sole();
 
-        $additionalStatusInfos = StatusReasonInfos::fromXmlReader($reader, $root);
+                /** @var string */
+                $originalEndToEndId = $reader->xpathValue("{$path}/OrgnlEndToEndId")->sole();
 
-        return new self(
-            $originalInstrumentId,
-            $originalEndToEndId,
-            TransactionStatusType::from($status),
-            $additionalStatusInfos,
-        );
+                /** @var string */
+                $status = $reader->xpathValue("{$path}/TxSts")->sole();
+
+                $additionalStatusInfos = StatusReasonInfos::fromXmlReader($reader, $path);
+
+                return new self(
+                    $originalInstrumentId,
+                    $originalEndToEndId,
+                    TransactionStatusType::from($status),
+                    $additionalStatusInfos,
+                );
+            });
+
+        return $transactionInfos;
     }
 }

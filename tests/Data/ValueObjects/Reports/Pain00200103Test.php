@@ -22,7 +22,8 @@ class Pain00200103Test extends TestCase
     {
         $report = Pain00200103::fromXml($this->invalidAccountNoReport());
 
-        $this->assertEquals('1000075215', $report->originalPaymentInfoAndStatus->originalPaymentInfoId);
+        $record = $report->originalPaymentInfoAndStatuses->first();
+        $this->assertEquals('1000075215', $record->originalPaymentInfoId);
     }
 
     public function test_can_get_all_nested_errors(): void
