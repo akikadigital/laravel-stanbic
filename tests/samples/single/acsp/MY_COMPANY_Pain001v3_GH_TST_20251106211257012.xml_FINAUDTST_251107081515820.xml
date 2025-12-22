@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document xmlns='urn:iso:std:iso:20022:tech:xsd:pain.002.001.03'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>50343283</MsgId>
+      <CreDtTm>2025-11-07T08:15:15</CreDtTm>
+      <InitgPty>
+        <Nm>Standard Bank SA</Nm>
+        <Id>
+          <OrgId>
+            <BICOrBEI>SBZAZAJJXXX</BICOrBEI>
+          </OrgId>
+        </Id>
+      </InitgPty>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>MSG04FDC7</OrgnlMsgId>
+      <OrgnlMsgNmId>PAIN.001.001.03</OrgnlMsgNmId>
+      <OrgnlCreDtTm>2025-11-06T21:12:57</OrgnlCreDtTm>
+      <OrgnlNbOfTxs>1</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>38118</OrgnlCtrlSum>
+      <GrpSts>ACSP</GrpSts>
+      <StsRsnInf>
+        <AddtlInf>Status : Fully Processed</AddtlInf>
+      </StsRsnInf>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0HEQV4</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0P4WN0</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0NGM8F</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">38118</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>rerum aliquam non</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Port Gregorioport</StrtNm>
+              <TwnNm>Haley Heights</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>

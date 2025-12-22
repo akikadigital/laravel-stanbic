@@ -102,7 +102,7 @@ class Pain00100103
         /** @var string */
         $root = config('stanbic.output_root');
 
-        // CINCH_CINCHH2H_Pain001v3_GH_TST_yyyymmddhhmmssSSS.xml
+        // MY_COMPANYC2C_Pain001v3_GH_TST_yyyymmddhhmmssSSS.xml
         // Microseconds (u) has 6 chars, we need only 3 (SSS). so strip the last 3 chars
         $filename = substr(now()->format('YmdHisu'), 0, -3);
 

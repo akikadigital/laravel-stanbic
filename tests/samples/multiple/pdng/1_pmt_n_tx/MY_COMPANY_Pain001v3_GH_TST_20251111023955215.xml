@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>MSG07J8EO</MsgId>
+      <CreDtTm>2025-11-11T02:39:55</CreDtTm>
+      <NbOfTxs>30</NbOfTxs>
+      <CtrlSum>43136</CtrlSum>
+      <InitgPty>
+        <Id>
+          <OrgId>
+            <Othr>
+              <Id>MY.COMPANY/COMPANYC2C</Id>
+            </Othr>
+          </OrgId>
+        </Id>
+      </InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PMTINF032A3N</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <BtchBookg>true</BtchBookg>
+      <PmtTpInf>
+        <InstrPrty>NORM</InstrPrty>
+      </PmtTpInf>
+      <ReqdExctnDt>2025-11-11</ReqdExctnDt>
+      <Dbtr>
+        <Nm>MY.COMPANY/COMPANYC2C</Nm>
+        <PstlAdr>
+          <Ctry>GH</Ctry>
+        </PstlAdr>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <Othr>
+            <Id>1234567812341</Id>
+          </Othr>
+        </Id>
+        <Ccy>GHS</Ccy>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <ClrSysMmbId>
+            <MmbId>190101</MmbId>
+          </ClrSysMmbId>
+        </FinInstnId>
+      </DbtrAgt>
+      <ChrgBr>DEBT</ChrgBr>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0FMLK4</InstrId>
+          <EndToEndId>INST0XOSVK</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1586</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Tiffany Gardens</StrtNm>
+            <BldgNb>89252</BldgNb>
+            <PstCd>60182</PstCd>
+            <TwnNm>Jilliantown</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>distinctio vero dolore</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0P8Z25</InstrId>
+          <EndToEndId>INST07D2C5</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1264</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Maryjane Inlet</StrtNm>
+            <BldgNb>99837</BldgNb>
+            <PstCd>70786-5882</PstCd>
+            <TwnNm>South Leonoraside</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>quam perspiciatis sed</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0QRODS</InstrId>
+          <EndToEndId>INST05RCAI</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1513</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Steuber Glen</StrtNm>
+            <BldgNb>12582</BldgNb>
+            <PstCd>13744</PstCd>
+            <TwnNm>Stracketown</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>quo sequi quia</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT09R978</InstrId>
+          <EndToEndId>INST0EPLJJ</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1936</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Abshire Avenue</StrtNm>
+            <BldgNb>5655</BldgNb>
+            <PstCd>37042</PstCd>
+            <TwnNm>West Shanny</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>non tenetur harum</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0VICTV</InstrId>
+          <EndToEndId>INST0F4LBE</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1100</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Adaline Courts</StrtNm>
+            <BldgNb>2930</BldgNb>
+            <PstCd>67427-8857</PstCd>
+            <TwnNm>Port Terrill</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>eius corporis dolores</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0SBJFA</InstrId>
+          <EndToEndId>INST0CR7CW</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1828</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Gage Trail</StrtNm>
+            <BldgNb>975</BldgNb>
+            <PstCd>52951</PstCd>
+            <TwnNm>Torphyburgh</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>quibusdam quisquam consequatur</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT09773D</InstrId>
+          <EndToEndId>INST0MJGMC</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1064</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Glover Drive</StrtNm>
+            <BldgNb>4962</BldgNb>
+            <PstCd>45316-5970</PstCd>
+            <TwnNm>New Rachael</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>fuga aut cum</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT04C3EV</InstrId>
+          <EndToEndId>INST0WY4B0</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1445</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Beahan Key</StrtNm>
+            <BldgNb>279</BldgNb>
+            <PstCd>68908</PstCd>
+            <TwnNm>South Madonna</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>sit perferendis quam</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT04BGPF</InstrId>
+          <EndToEndId>INST0R9VU8</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1374</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Lesch Pines</StrtNm>
+            <BldgNb>7818</BldgNb>
+            <PstCd>26468</PstCd>
+            <TwnNm>South Coralieville</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>enim vel est</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT089HP5</InstrId>
+          <EndToEndId>INST0C0B6I</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1114</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Mante Port</StrtNm>
+            <BldgNb>979</BldgNb>
+            <PstCd>20140</PstCd>
+            <TwnNm>Justenview</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>qui culpa vitae</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0AKIYG</InstrId>
+          <EndToEndId>INST0EG3QR</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1935</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Rosina Square</StrtNm>
+            <BldgNb>2381</BldgNb>
+            <PstCd>48455</PstCd>
+            <TwnNm>Klingtown</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>et dolores quos</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT08NH20</InstrId>
+          <EndToEndId>INST03C7W8</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1201</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Noe Ports</StrtNm>
+            <BldgNb>451</BldgNb>
+            <PstCd>42316</PstCd>
+            <TwnNm>Zulauffort</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>corporis mollitia ipsam</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0ITXMP</InstrId>
+          <EndToEndId>INST09H5GI</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1986</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Jackeline Prairie</StrtNm>
+            <BldgNb>661</BldgNb>
+            <PstCd>13700</PstCd>
+            <TwnNm>New Gussie</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>commodi sint magni</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0HN7OY</InstrId>
+          <EndToEndId>INST00NDX1</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1094</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Barrett Stravenue</StrtNm>
+            <BldgNb>982</BldgNb>
+            <PstCd>38576-4051</PstCd>
+            <TwnNm>Reingershire</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>recusandae dolor sint</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0YZC8N</InstrId>
+          <EndToEndId>INST01OM2C</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1006</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Pfannerstill Tunnel</StrtNm>
+            <BldgNb>8170</BldgNb>
+            <PstCd>17534</PstCd>
+            <TwnNm>Jackelinetown</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>minus repudiandae sed</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0XC3BM</InstrId>
+          <EndToEndId>INST02E68A</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1277</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Jace Parkways</StrtNm>
+            <BldgNb>230</BldgNb>
+            <PstCd>30519</PstCd>
+            <TwnNm>Emelieshire</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>officiis voluptas ullam</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0DC2U2</InstrId>
+          <EndToEndId>INST0JOZ78</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1590</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Jalyn Mountains</StrtNm>
+            <BldgNb>3799</BldgNb>
+            <PstCd>80632</PstCd>
+            <TwnNm>North Mikayla</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>amet nam soluta</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0RFMDG</InstrId>
+          <EndToEndId>INST05QRBX</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1172</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Runolfsdottir Spurs</StrtNm>
+            <BldgNb>376</BldgNb>
+            <PstCd>59491-3258</PstCd>
+            <TwnNm>Brucefurt</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>unde natus omnis</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT061L6D</InstrId>
+          <EndToEndId>INST06NJAU</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1287</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Toby Station</StrtNm>
+            <BldgNb>8439</BldgNb>
+            <PstCd>59141</PstCd>
+            <TwnNm>Lake Trevor</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>nemo maiores voluptas</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0RTEHS</InstrId>
+          <EndToEndId>INST09H13L</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1740</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Graham Neck</StrtNm>
+            <BldgNb>1921</BldgNb>
+            <PstCd>13727</PstCd>
+            <TwnNm>North Talon</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>rem quia omnis</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0CRG5P</InstrId>
+          <EndToEndId>INST0YRGX5</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1065</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Willard Place</StrtNm>
+            <BldgNb>69070</BldgNb>
+            <PstCd>27107</PstCd>
+            <TwnNm>Wolfberg</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>magnam ut et</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT005KG5</InstrId>
+          <EndToEndId>INST0I6HL1</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1585</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Fredy Point</StrtNm>
+            <BldgNb>12140</BldgNb>
+            <PstCd>15626-3480</PstCd>
+            <TwnNm>Effertzport</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>dolor et quo</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0O5ZKJ</InstrId>
+          <EndToEndId>INST0HQM0Y</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1668</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Angela Harbors</StrtNm>
+            <BldgNb>865</BldgNb>
+            <PstCd>36196-3247</PstCd>
+            <TwnNm>East Granville</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>unde qui minus</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0HL2B5</InstrId>
+          <EndToEndId>INST0H0D56</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1213</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Amparo Brooks</StrtNm>
+            <BldgNb>30753</BldgNb>
+            <PstCd>85014-2450</PstCd>
+            <TwnNm>North Erik</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>quos nihil sed</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT01T5D5</InstrId>
+          <EndToEndId>INST0BTIOQ</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1484</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Wintheiser Divide</StrtNm>
+            <BldgNb>94053</BldgNb>
+            <PstCd>96054-6125</PstCd>
+            <TwnNm>Kohlerstad</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>veritatis enim reiciendis</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0MQXRB</InstrId>
+          <EndToEndId>INST0MGNM3</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1499</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Von Road</StrtNm>
+            <BldgNb>9860</BldgNb>
+            <PstCd>65368-3624</PstCd>
+            <TwnNm>Feilview</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>voluptatem est atque</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0RGM42</InstrId>
+          <EndToEndId>INST0FSMIF</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1816</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Lowell Fall</StrtNm>
+            <BldgNb>14366</BldgNb>
+            <PstCd>48733-8886</PstCd>
+            <TwnNm>Ethylmouth</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>id suscipit nam</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT03M8KE</InstrId>
+          <EndToEndId>INST0V0P2X</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1363</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Rowe Park</StrtNm>
+            <BldgNb>720</BldgNb>
+            <PstCd>54668-4147</PstCd>
+            <TwnNm>North Havenport</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>qui consequatur sed</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0SUHG2</InstrId>
+          <EndToEndId>INST0O091S</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1023</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Effertz Hill</StrtNm>
+            <BldgNb>89544</BldgNb>
+            <PstCd>85869</PstCd>
+            <TwnNm>New Nolantown</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>rem rerum voluptas</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0I3Q5H</InstrId>
+          <EndToEndId>INST0HKO2G</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">1908</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Irma Trail</StrtNm>
+            <BldgNb>326</BldgNb>
+            <PstCd>33338</PstCd>
+            <TwnNm>West Geraldine</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>dolores voluptatem ut</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>

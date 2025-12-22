@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>MSG04FDC7</MsgId>
+      <CreDtTm>2025-11-06T21:12:57</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>38118</CtrlSum>
+      <InitgPty>
+        <Id>
+          <OrgId>
+            <Othr>
+              <Id>MY.COMPANY/COMPANYC2C</Id>
+            </Othr>
+          </OrgId>
+        </Id>
+      </InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>PMTINF0HEQV4</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <BtchBookg>true</BtchBookg>
+      <PmtTpInf>
+        <InstrPrty>NORM</InstrPrty>
+      </PmtTpInf>
+      <ReqdExctnDt>2025-11-06</ReqdExctnDt>
+      <Dbtr>
+        <Nm>MY.COMPANY/COMPANYC2C</Nm>
+        <PstlAdr>
+          <Ctry>GH</Ctry>
+        </PstlAdr>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <Othr>
+            <Id>1234567812341</Id>
+          </Othr>
+        </Id>
+        <Ccy>GHS</Ccy>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <ClrSysMmbId>
+            <MmbId>190101</MmbId>
+          </ClrSysMmbId>
+        </FinInstnId>
+      </DbtrAgt>
+      <ChrgBr>DEBT</ChrgBr>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>PMT0P4WN0</InstrId>
+          <EndToEndId>INST0NGM8F</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="GHS">38118</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <ClrSysMmbId>
+              <MmbId>190101</MmbId>
+            </ClrSysMmbId>
+            <Nm>Stanbic Bank Ghana Ltd</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Darion Ferry</Nm>
+          <PstlAdr>
+            <StrtNm>Haley Heights</StrtNm>
+            <BldgNb>83968</BldgNb>
+            <PstCd>46741</PstCd>
+            <TwnNm>Port Gregorioport</TwnNm>
+            <Ctry>GH</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>1123412345678</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>rerum aliquam non</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>

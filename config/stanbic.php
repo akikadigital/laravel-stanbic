@@ -14,12 +14,12 @@ return [
     | Output File Prefix
     |--------------------------------------------------------------------------
     | As of 2025/10/07, the below is a sample of the recommended file name formats:
-    |  - For the test/uat environment: CINCH_CINCHH2H_Pain001v3_GH_TST_yyyymmddhhmmssSSS.xml
-    |  - For the production environment: CINCH_CINCHH2H_Pain001v3_GH_PRD_yyyymmddhhmmssSSS.xml
+    |  - For the test/uat environment: MY_COMPANYC2C_Pain001v3_GH_TST_yyyymmddhhmmssSSS.xml
+    |  - For the production environment: MY_COMPANYC2C_Pain001v3_GH_PRD_yyyymmddhhmmssSSS.xml
     |
     | As such, the prefix can be, for example, either:
-    |  - CINCH_CINCHH2H_Pain001v3_GH_TST_  or
-    |  - CINCH_CINCHH2H_Pain001v3_GH_PRD_
+    |  - MY_COMPANYC2C_Pain001v3_GH_TST_  or
+    |  - MY_COMPANYC2C_Pain001v3_GH_PRD_
     */
-    'output_file_prefix' => env('STANBIC_OUTPUT_FILE_PREFIX', 'CINCH_CINCHH2H_Pain001v3_GH_TST_'),
+    'output_file_prefix' => env('STANBIC_OUTPUT_FILE_PREFIX'),
 ];

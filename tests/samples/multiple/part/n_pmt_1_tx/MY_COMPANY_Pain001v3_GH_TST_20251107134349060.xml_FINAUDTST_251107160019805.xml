@@ -1,0 +1,3029 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document xmlns='urn:iso:std:iso:20022:tech:xsd:pain.002.001.03'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+  <CstmrPmtStsRpt>
+    <GrpHdr>
+      <MsgId>50349541</MsgId>
+      <CreDtTm>2025-11-07T16:00:18</CreDtTm>
+      <InitgPty>
+        <Nm>Standard Bank SA</Nm>
+        <Id>
+          <OrgId>
+            <BICOrBEI>SBZAZAJJXXX</BICOrBEI>
+          </OrgId>
+        </Id>
+      </InitgPty>
+    </GrpHdr>
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>MSG0JSPNY</OrgnlMsgId>
+      <OrgnlMsgNmId>PAIN.001.001.03</OrgnlMsgNmId>
+      <OrgnlCreDtTm>2025-11-07T13:43:49</OrgnlCreDtTm>
+      <OrgnlNbOfTxs>40</OrgnlNbOfTxs>
+      <OrgnlCtrlSum>2153252</OrgnlCtrlSum>
+      <GrpSts>PART</GrpSts>
+      <StsRsnInf>
+        <AddtlInf>Status : Partially Processed</AddtlInf>
+      </StsRsnInf>
+    </OrgnlGrpInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0FYKBY</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0L7RQ2</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0W1EJO</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">26198</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>esse voluptatem delectus</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Port Lukas</StrtNm>
+              <TwnNm>Robel Crescent</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0OK8MM</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0OR6VY</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0KUKOK</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">49456</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>dolores illo eum</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Marvinstad</StrtNm>
+              <TwnNm>Tiana Ways</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0QV5D5</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0UBWA3</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0LFPNA</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">31142</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>adipisci in saepe</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Loraineborough</StrtNm>
+              <TwnNm>Diana Ferry</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0Q8N0X</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0WM5XV</OrgnlInstrId>
+        <OrgnlEndToEndId>INST05OU77</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">95503</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>voluptatem quaerat illum</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Reeseton</StrtNm>
+              <TwnNm>Tara Oval</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0YREJL</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0ZFB0A</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0ESXFS</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">23481</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>voluptatem qui doloribus</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Lake Erich</StrtNm>
+              <TwnNm>Betty Cliff</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF09HZSN</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0HAGR8</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0YRIGO</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">79656</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>non voluptatem aut</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Lake Adrielstad</StrtNm>
+              <TwnNm>Terry Squares</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF03Z8J6</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0GT5OU</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0XZG0L</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">70077</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>perferendis placeat odio</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>North Aniyahport</StrtNm>
+              <TwnNm>Reynolds Mission</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0AHITC</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0V7EHE</OrgnlInstrId>
+        <OrgnlEndToEndId>INST00FYP8</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">95991</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>eos qui sit</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Letaside</StrtNm>
+              <TwnNm>Schinner Pines</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0SE9DU</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT038P9B</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0TH0RO</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">62428</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>molestias beatae enim</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>North Sandrinechester</StrtNm>
+              <TwnNm>Penelope Alley</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0V8IZR</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0FXVYY</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0CEV5B</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">10372</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>ut itaque necessitatibus</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Bechtelarfort</StrtNm>
+              <TwnNm>Berge Corner</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0YBTLU</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0AQIKH</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0YS3PT</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">89062</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>aut vel amet</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Flatleystad</StrtNm>
+              <TwnNm>Norbert Plaza</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0IOOAH</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0AHH5E</OrgnlInstrId>
+        <OrgnlEndToEndId>INST09VHVS</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">14157</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>officia omnis placeat</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Beattybury</StrtNm>
+              <TwnNm>Brown Road</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0UBCI9</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0J0QW0</OrgnlInstrId>
+        <OrgnlEndToEndId>INST04OXWE</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">70867</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>veritatis aliquid qui</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>West Angelinamouth</StrtNm>
+              <TwnNm>Oren Spring</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0CPWQB</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT046AY6</OrgnlInstrId>
+        <OrgnlEndToEndId>INST09TPC2</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">80043</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>iste atque facilis</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>New Craig</StrtNm>
+              <TwnNm>Blanda Valleys</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0EDM5P</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0B3S4Z</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0DLH46</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">33531</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>et doloribus ullam</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Monahanton</StrtNm>
+              <TwnNm>Frami Plains</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0Z9AJY</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT077DHH</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0PMH0R</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">75605</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>earum porro porro</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Roobmouth</StrtNm>
+              <TwnNm>Turner Key</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0BJ8OY</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0PCMEQ</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0TMCFB</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">26229</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>iste vitae qui</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Toniville</StrtNm>
+              <TwnNm>Kailey Manor</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF00FGFP</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0EGSQC</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0X7J7A</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">55819</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>ad hic illum</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Batzville</StrtNm>
+              <TwnNm>Herzog Mountains</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0TQCZY</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0HFIYF</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0OTAHX</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">66617</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>soluta maxime repellat</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Lake Giannihaven</StrtNm>
+              <TwnNm>Rohan Glens</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0E1ZQD</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT034MB9</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0TGIDK</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">15573</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>laboriosam nemo laborum</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Lake Godfreymouth</StrtNm>
+              <TwnNm>Jon Summit</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0X0KVG</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0MUGAC</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0C19AJ</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">39491</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>est repellat ut</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Port Maxwell</StrtNm>
+              <TwnNm>Marcos Spring</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF04MBXP</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0CO5TR</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0TY4ZJ</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">36950</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>est qui qui</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Lake Robynshire</StrtNm>
+              <TwnNm>Shaniya Loaf</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF07P4TX</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0L7XJ8</OrgnlInstrId>
+        <OrgnlEndToEndId>INST03NB8G</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">11131</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>quos minima quasi</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>North Garlandland</StrtNm>
+              <TwnNm>White Parkways</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0LOTO0</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0ZDNT9</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0DHSP9</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">68562</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>tempore velit laborum</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Tyreemouth</StrtNm>
+              <TwnNm>Elena Well</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0RFJJ1</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT07ZVEQ</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0PW3WH</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">63274</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>quis optio nihil</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Schusterville</StrtNm>
+              <TwnNm>Shanahan Locks</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0SFLMM</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0QW99X</OrgnlInstrId>
+        <OrgnlEndToEndId>INST08NBQB</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">69003</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>omnis sint et</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>West Eloiseview</StrtNm>
+              <TwnNm>Miller Heights</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0UR0EB</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0SDT20</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0CUHC9</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">18878</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>eveniet velit velit</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Deckowhaven</StrtNm>
+              <TwnNm>Bernier Trail</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0ETQDB</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0FN6NS</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0PKSAR</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">60333</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>repudiandae est quo</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Lake Clayburgh</StrtNm>
+              <TwnNm>Purdy Estate</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0BCO4J</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0MA8I3</OrgnlInstrId>
+        <OrgnlEndToEndId>INST037KWZ</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">11766</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>minus consequuntur aut</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Haucktown</StrtNm>
+              <TwnNm>Jenkins Lake</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF05IWRX</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0PJWK8</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0O5VUV</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">99092</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>possimus recusandae eum</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Port Sanford</StrtNm>
+              <TwnNm>Hermann Ridges</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF034YAH</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0EYYIQ</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0Q74FE</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">87082</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>consequuntur adipisci eos</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>New Ariannamouth</StrtNm>
+              <TwnNm>Cassidy Summit</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0JHO06</OrgnlPmtInfId>
+      <StsRsnInf>
+        <AddtlInf>Status : Successfully Processed</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0L7A2Q</OrgnlInstrId>
+        <OrgnlEndToEndId>INST04Z2W4</OrgnlEndToEndId>
+        <TxSts>ACSP</TxSts>
+        <StsRsnInf>
+          <AddtlInf>Status : Successfully Processed</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">32422</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>illo rerum consectetur</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>North Frankburgh</StrtNm>
+              <TwnNm>Chelsey Court</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0QSFL7</OrgnlPmtInfId>
+      <StsRsnInf>
+        <Rsn>
+          <Cd>NARR</Cd>
+        </Rsn>
+        <AddtlInf>Status : Processing failed - Insufficient fu</AddtlInf>
+        <AddtlInf>Error Code : 2I</AddtlInf>
+        <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0QURN2</OrgnlInstrId>
+        <OrgnlEndToEndId>INST083ISJ</OrgnlEndToEndId>
+        <TxSts>RJCT</TxSts>
+        <StsRsnInf>
+          <Rsn>
+            <Cd>NARR</Cd>
+          </Rsn>
+          <AddtlInf>Status : Failed - Ordering Account: Insuffic</AddtlInf>
+          <AddtlInf>Error Code : 2I</AddtlInf>
+          <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">29192</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>quae nostrum est</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>West Eloisefort</StrtNm>
+              <TwnNm>Dominique Loop</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0H3T81</OrgnlPmtInfId>
+      <StsRsnInf>
+        <Rsn>
+          <Cd>NARR</Cd>
+        </Rsn>
+        <AddtlInf>Status : Processing failed - Insufficient fu</AddtlInf>
+        <AddtlInf>Error Code : 2I</AddtlInf>
+        <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0WYSS6</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0MR5XB</OrgnlEndToEndId>
+        <TxSts>RJCT</TxSts>
+        <StsRsnInf>
+          <Rsn>
+            <Cd>NARR</Cd>
+          </Rsn>
+          <AddtlInf>Status : Failed - Ordering Account: Insuffic</AddtlInf>
+          <AddtlInf>Error Code : 2I</AddtlInf>
+          <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">85354</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>architecto est tempore</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Rocioshire</StrtNm>
+              <TwnNm>Alfonso Plains</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0SYVKH</OrgnlPmtInfId>
+      <StsRsnInf>
+        <Rsn>
+          <Cd>NARR</Cd>
+        </Rsn>
+        <AddtlInf>Status : Processing failed - Insufficient fu</AddtlInf>
+        <AddtlInf>Error Code : 2I</AddtlInf>
+        <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0Z3ABH</OrgnlInstrId>
+        <OrgnlEndToEndId>INST013M06</OrgnlEndToEndId>
+        <TxSts>RJCT</TxSts>
+        <StsRsnInf>
+          <Rsn>
+            <Cd>NARR</Cd>
+          </Rsn>
+          <AddtlInf>Status : Failed - Ordering Account: Insuffic</AddtlInf>
+          <AddtlInf>Error Code : 2I</AddtlInf>
+          <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">42407</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>quo alias omnis</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Lake Rahsaanfort</StrtNm>
+              <TwnNm>Dominic Crest</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0BKV54</OrgnlPmtInfId>
+      <StsRsnInf>
+        <Rsn>
+          <Cd>NARR</Cd>
+        </Rsn>
+        <AddtlInf>Status : Processing failed - Insufficient fu</AddtlInf>
+        <AddtlInf>Error Code : 2I</AddtlInf>
+        <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT04727X</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0UJB75</OrgnlEndToEndId>
+        <TxSts>RJCT</TxSts>
+        <StsRsnInf>
+          <Rsn>
+            <Cd>NARR</Cd>
+          </Rsn>
+          <AddtlInf>Status : Failed - Ordering Account: Insuffic</AddtlInf>
+          <AddtlInf>Error Code : 2I</AddtlInf>
+          <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">54157</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>voluptas sunt impedit</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>North Jammiemouth</StrtNm>
+              <TwnNm>Becker Glen</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF013TNA</OrgnlPmtInfId>
+      <StsRsnInf>
+        <Rsn>
+          <Cd>NARR</Cd>
+        </Rsn>
+        <AddtlInf>Status : Processing failed - Insufficient fu</AddtlInf>
+        <AddtlInf>Error Code : 2I</AddtlInf>
+        <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0D2FT3</OrgnlInstrId>
+        <OrgnlEndToEndId>INST08E6N1</OrgnlEndToEndId>
+        <TxSts>RJCT</TxSts>
+        <StsRsnInf>
+          <Rsn>
+            <Cd>NARR</Cd>
+          </Rsn>
+          <AddtlInf>Status : Failed - Ordering Account: Insuffic</AddtlInf>
+          <AddtlInf>Error Code : 2I</AddtlInf>
+          <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">86175</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>placeat fuga impedit</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>South Abdullah</StrtNm>
+              <TwnNm>Carroll Isle</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0AEQ2O</OrgnlPmtInfId>
+      <StsRsnInf>
+        <Rsn>
+          <Cd>NARR</Cd>
+        </Rsn>
+        <AddtlInf>Status : Processing failed - Insufficient fu</AddtlInf>
+        <AddtlInf>Error Code : 2I</AddtlInf>
+        <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT042M05</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0LWWLQ</OrgnlEndToEndId>
+        <TxSts>RJCT</TxSts>
+        <StsRsnInf>
+          <Rsn>
+            <Cd>NARR</Cd>
+          </Rsn>
+          <AddtlInf>Status : Failed - Ordering Account: Insuffic</AddtlInf>
+          <AddtlInf>Error Code : 2I</AddtlInf>
+          <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">61751</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>ab non libero</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Lake Pietro</StrtNm>
+              <TwnNm>Felipa Mountain</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0GUWDS</OrgnlPmtInfId>
+      <StsRsnInf>
+        <Rsn>
+          <Cd>NARR</Cd>
+        </Rsn>
+        <AddtlInf>Status : Processing failed - Insufficient fu</AddtlInf>
+        <AddtlInf>Error Code : 2I</AddtlInf>
+        <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT07YHF0</OrgnlInstrId>
+        <OrgnlEndToEndId>INST01VB5V</OrgnlEndToEndId>
+        <TxSts>RJCT</TxSts>
+        <StsRsnInf>
+          <Rsn>
+            <Cd>NARR</Cd>
+          </Rsn>
+          <AddtlInf>Status : Failed - Ordering Account: Insuffic</AddtlInf>
+          <AddtlInf>Error Code : 2I</AddtlInf>
+          <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">94839</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>accusamus et voluptatem</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Port Camilleburgh</StrtNm>
+              <TwnNm>Estel Roads</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>PMTINF0CTG22</OrgnlPmtInfId>
+      <StsRsnInf>
+        <Rsn>
+          <Cd>NARR</Cd>
+        </Rsn>
+        <AddtlInf>Status : Processing failed - Insufficient fu</AddtlInf>
+        <AddtlInf>Error Code : 2I</AddtlInf>
+        <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+      </StsRsnInf>
+      <TxInfAndSts>
+        <OrgnlInstrId>PMT0WVL8L</OrgnlInstrId>
+        <OrgnlEndToEndId>INST0PTLH7</OrgnlEndToEndId>
+        <TxSts>RJCT</TxSts>
+        <StsRsnInf>
+          <Rsn>
+            <Cd>NARR</Cd>
+          </Rsn>
+          <AddtlInf>Status : Failed - Ordering Account: Insuffic</AddtlInf>
+          <AddtlInf>Error Code : 2I</AddtlInf>
+          <AddtlInf>Error Description : INSUFFICIENT FUNDS</AddtlInf>
+        </StsRsnInf>
+        <OrgnlTxRef>
+          <Amt>
+            <InstdAmt Ccy="GHS">29586</InstdAmt>
+          </Amt>
+          <ReqdExctnDt>2025-11-07</ReqdExctnDt>
+          <RmtInf>
+            <Ustrd>quo maiores velit</Ustrd>
+          </RmtInf>
+          <Dbtr>
+            <Nm>MY GHANAIAN COMPANY</Nm>
+            <PstlAdr>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Dbtr>
+          <DbtrAcct>
+            <Id>
+              <Othr>
+                <Id>1234567812341</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </DbtrAcct>
+          <DbtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </DbtrAgt>
+          <CdtrAgt>
+            <FinInstnId>
+              <ClrSysMmbId>
+                <MmbId>190101</MmbId>
+              </ClrSysMmbId>
+              <PstlAdr>
+                <Ctry>GH</Ctry>
+              </PstlAdr>
+            </FinInstnId>
+          </CdtrAgt>
+          <Cdtr>
+            <Nm>Darion Ferry</Nm>
+            <PstlAdr>
+              <StrtNm>Lake Berniecefort</StrtNm>
+              <TwnNm>Kerluke Orchard</TwnNm>
+              <Ctry>GH</Ctry>
+            </PstlAdr>
+          </Cdtr>
+          <CdtrAcct>
+            <Id>
+              <Othr>
+                <Id>1123412345678</Id>
+              </Othr>
+            </Id>
+            <Ccy>GHS</Ccy>
+          </CdtrAcct>
+        </OrgnlTxRef>
+      </TxInfAndSts>
+    </OrgnlPmtInfAndSts>
+  </CstmrPmtStsRpt>
+</Document>
