@@ -32,10 +32,10 @@ class Pain00200103
     /** @return Collection<int, string> */
     public function getAllStatusReasons(): Collection
     {
-        $reasons = $this->originalGroupInfoAndStatus->statusReasonInfos->infos;
+        $reasons = $this->originalGroupInfoAndStatus->statusReasonInfos->additionalInfos;
         if ($this->originalPaymentInfoAndStatus) {
-            $reasons = $reasons->merge($this->originalPaymentInfoAndStatus->statusReasonInfos->infos);
-            $reasons = $reasons->merge($this->originalPaymentInfoAndStatus->transactionInfoAndStatus->statusReasonInfos->infos);
+            $reasons = $reasons->merge($this->originalPaymentInfoAndStatus->statusReasonInfos->additionalInfos);
+            $reasons = $reasons->merge($this->originalPaymentInfoAndStatus->transactionInfoAndStatus->statusReasonInfos->additionalInfos);
         }
 
         return $reasons;
