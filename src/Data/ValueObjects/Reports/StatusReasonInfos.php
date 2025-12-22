@@ -17,37 +17,4 @@ class StatusReasonInfos
 
         return new self($infos);
     }
-
-    /** @param array<string, mixed> $statusReasonInfos */
-    public static function fromArray(array $statusReasonInfos): self
-    {
-        /*
-        * this can look like:
-        *
-        * <StsRsnInf>
-        *   <AddtlInf>Status : Processing Failed</AddtlInf>
-        * </StsRsnInf>
-        *
-        * or:
-        *
-        * <StsRsnInf>
-        *   <Rsn>
-        *     <Cd>NARR</Cd>
-        *   </Rsn>
-        *   <AddtlInf>Status : Failed - Invalid Account Number</AddtlInf>
-        *   <AddtlInf>Error Code : !%</AddtlInf>
-        *   <AddtlInf>Error Description : ACCOUNT NO INVALID</AddtlInf>
-        * </StsRsnInf>
-        *
-        * To account for both, just use pluck and flatten
-        */
-
-        /** @var Collection<int, string> $infos */
-        $infos = collect($statusReasonInfos)
-            ->pluck('AddtlInf')
-            ->flatten()
-            ->values();
-
-        return new self($infos);
-    }
 }

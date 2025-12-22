@@ -23,26 +23,13 @@ class StatusReasonInfosTest extends TestCase
 
     public function test_can_parse_from_xml(): void
     {
-        $root = '//CstmrPmtStsRpt/OrgnlGrpInfAndSts';
-
-        $statusReasonInfos = StatusReasonInfos::fromXmlReader($this->xmlReader, $root);
-
-        /** @var \Illuminate\Support\Collection<int, string> */
-        $infos = $this->xmlReader->xpathValue("{$root}/StsRsnInf/AddtlInf")->collect();
-
-        $this->assertEquals($infos->all(), $statusReasonInfos->additionalInfos->all());
-    }
-
-    public function test_can_parse_from_array(): void
-    {
         $roots = [
-            '//CstmrPmtStsRpt/OrgnlPmtInfAndSts/TxInfAndSts',
             '//CstmrPmtStsRpt/OrgnlGrpInfAndSts',
+            '//CstmrPmtStsRpt/OrgnlPmtInfAndSts/TxInfAndSts',
         ];
 
         foreach ($roots as $root) {
-            $statusReasonInfos = $this->xmlReader->xpathValue("{$root}/StsRsnInf")->collect();
-            $statusReasonInfos = StatusReasonInfos::fromArray($statusReasonInfos->all());
+            $statusReasonInfos = StatusReasonInfos::fromXmlReader($this->xmlReader, $root);
 
             /** @var \Illuminate\Support\Collection<int, string> */
             $infos = $this->xmlReader->xpathValue("{$root}/StsRsnInf/AddtlInf")->collect();

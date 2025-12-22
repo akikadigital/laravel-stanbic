@@ -35,7 +35,7 @@ class OriginalGroupInfoAndStatusTest extends TestCase
             $this->assertEquals($originalNumberOfTransactions, $originalGroupInfoAndStatus->originalNumberOfTransactions);
             $this->assertEquals($originalControlSum, $originalGroupInfoAndStatus->originalControlSum);
             $this->assertEquals(GroupStatusType::from($groupStatus), $originalGroupInfoAndStatus->groupStatus);
-            $this->assertEquals($infos->all(), $originalGroupInfoAndStatus->statusReasonInfos->infos->all());
+            $this->assertEquals($infos->all(), $originalGroupInfoAndStatus->statusReasonInfos->additionalInfos->all());
         }
     }
 }
