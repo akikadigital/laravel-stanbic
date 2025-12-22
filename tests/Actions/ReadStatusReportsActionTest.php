@@ -14,18 +14,21 @@ class ReadStatusReportsActionTest extends TestCase
 {
     use HasSampleFiles;
 
+    public string $root;
+
     protected function setUp(): void
     {
         parent::setUp();
 
         $disk = config('stanbic.disk');
+        $this->root = config('stanbic.input_root');
 
         Storage::fake($disk);
-        Storage::disk($disk)->put('REPORT_01.xml', $this->ackReport());
-        Storage::disk($disk)->put('REPORT_02.xml', $this->nackReport());
-        Storage::disk($disk)->put('REPORT_03.xml', $this->invalidAccountNoReport());
-        Storage::disk($disk)->put('RANDOM_FILE_01.xml', "<Document xmlns='urn:iso:std:iso:20022:tech:xsd:pain.001.001.03'></Document>");
-        Storage::disk($disk)->put('RANDOM_FILE_02.txt', fake()->sentence());
+        Storage::disk($disk)->put("{$this->root}/REPORT_01.xml", $this->ackReport());
+        Storage::disk($disk)->put("{$this->root}/REPORT_02.xml", $this->nackReport());
+        Storage::disk($disk)->put("{$this->root}/REPORT_03.xml", $this->invalidAccountNoReport());
+        Storage::disk($disk)->put("{$this->root}/RANDOM_FILE_01.xml", "<Document xmlns='urn:iso:std:iso:20022:tech:xsd:pain.001.001.03'></Document>");
+        Storage::disk($disk)->put("{$this->root}/RANDOM_FILE_02.txt", fake()->sentence());
     }
 
     public function test_get_only_valid_report_paths(): void
@@ -33,9 +36,9 @@ class ReadStatusReportsActionTest extends TestCase
         $action = new ReadStatusReportsAction;
 
         $expected = [
-            'REPORT_01.xml',
-            'REPORT_02.xml',
-            'REPORT_03.xml',
+            "{$this->root}/REPORT_01.xml",
+            "{$this->root}/REPORT_02.xml",
+            "{$this->root}/REPORT_03.xml",
         ];
 
         $this->assertEquals($expected, $action->reportPaths->toArray());
@@ -57,7 +60,7 @@ class ReadStatusReportsActionTest extends TestCase
         Event::fake();
 
         $action = new ReadStatusReportsAction;
-        $action->reportPaths = collect(['REPORT_01.xml']);
+        $action->reportPaths = collect(["{$this->root}/REPORT_01.xml"]);
 
         $action->handle();
 
@@ -76,7 +79,7 @@ class ReadStatusReportsActionTest extends TestCase
     {
         $action = new ReadStatusReportsAction;
 
-        $contents = $action->getFileContents('REPORT_01.xml');
+        $contents = $action->getFileContents("{$this->root}/REPORT_01.xml");
 
         $this->assertNotNull($contents);
     }

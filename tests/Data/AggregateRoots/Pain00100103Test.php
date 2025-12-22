@@ -21,6 +21,7 @@ class Pain00100103Test extends TestCase
     {
         /** @var string */
         $disk = config('stanbic.disk');
+        $root = config('stanbic.output_root');
         Storage::fake($disk);
 
         $messageId = fake()->uuid();
@@ -73,14 +74,14 @@ class Pain00100103Test extends TestCase
             ->setDebtorAccount($companyAcNo, Currency::Cedi)
             ->setDebtorAgent($bankCode)
             ->setChargeBearer(ChargeBearerType::Debt)
-            ->setCreditTransferTransactionInfo($transactionInfo);
+            ->addCreditTransferTransactionInfo($transactionInfo);
 
         // 4. Generate and store XML
         $path = Pain00100103::make()
             ->setGroupHeader($groupHeader)
-            ->setPaymentInfo($paymentInfo)
+            ->addPaymentInfo($paymentInfo)
             ->store(); // Returns the stored file path
 
-        Storage::disk($disk)->assertExists($path);
+        Storage::disk($disk)->assertExists("{$root}/{$path}");
     }
 }

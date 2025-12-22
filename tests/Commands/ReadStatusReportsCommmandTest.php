@@ -12,16 +12,19 @@ class ReadStatusReportsCommmandTest extends TestCase
 {
     use HasSampleFiles;
 
+    public string $root;
+
     protected function setUp(): void
     {
         parent::setUp();
 
         $disk = config('stanbic.disk');
+        $this->root = config('stanbic.input_root');
 
         Storage::fake($disk);
-        Storage::disk($disk)->put('REPORT_01.xml', $this->ackReport());
-        Storage::disk($disk)->put('REPORT_02.xml', $this->nackReport());
-        Storage::disk($disk)->put('REPORT_03.xml', $this->invalidAccountNoReport());
+        Storage::disk($disk)->put("{$this->root}/REPORT_01.xml", $this->ackReport());
+        Storage::disk($disk)->put("{$this->root}/REPORT_02.xml", $this->nackReport());
+        Storage::disk($disk)->put("{$this->root}/REPORT_03.xml", $this->invalidAccountNoReport());
     }
 
     public function test_dispatches_received_reports(): void
