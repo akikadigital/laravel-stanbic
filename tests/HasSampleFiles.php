@@ -21,6 +21,11 @@ trait HasSampleFiles
         return $this->getFileContents('invalid_account_no.xml');
     }
 
+    public function acspReport(): string
+    {
+        return $this->getFileContents('multiple/acsp/n_pmt_1_tx/MY_COMPANY_Pain001v3_GH_TST_20251107114753482.xml_FINAUDTST_251107140021390.xml');
+    }
+
     public function basePath(string $path = ''): string
     {
         $orchestraPath = '/vendor/orchestra/testbench-core/laravel';
