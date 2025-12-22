@@ -75,54 +75,67 @@ use Illuminate\Console\Command;
 
 class DemoSinglePaymentCommand extends Command
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
     protected $signature = 'demo:single-payment';
 
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
     protected $description = 'Create a demo single payment';
 
-    /**
-     * Execute the console command.
-     */
     public function handle()
     {
-        $messageId = fake()->uuid();
-        $companyName = fake()->company();
-        $companyAcNo = fake()->randomNumber(8, true);
-        $amount = fake()->numberBetween(10_000, 99_999);
-
-        $paymentId = fake()->uuid();
-        $instructionId = fake()->uuid();
-        $bankCode = '190101';
-        $bank = 'Stanbic Bank Ghana Ltd';
-        $beneficiaryName = fake()->name();
-        $beneficiaryAcNo = fake()->randomNumber(8, true);
-        $paymentDescription = fake()->words(3, true);
-
-        $paymentInfoId = fake()->uuid();
-        $companyAcNo = fake()->randomNumber(8, true);
+        $messageId = fake()->regexify('MSG0[A-Z0-9]{5}');
+        $companyName = 'CINCH.MARKETS/CINCHH2H';
+        $companyAcNo = '9040012825999';
 
         // 1. Create group header
         $groupHeader = GroupHeader::make()
             ->setMessageId($messageId)
             ->setCreationDate(now())
-            ->setNumberOfTransactions(1)
-            ->setControlSum($amount)
-            ->setInitiatingParty($companyName, $companyAcNo);
+            ->setInitiatingParty(null, $companyName);
 
-        // 2. Create transaction info
-        $transactionInfo = CreditTransferTransactionInfo::make()
+        $filePath = Pain00100103::make()
+            ->setGroupHeader($groupHeader)
+            ->addPaymentInfo($this->getPaymentInfo($companyName, $companyAcNo))
+            ->store();
+
+        $this->line("Saved to: \n\t{$filePath}");
+    }
+
+    public function getPaymentInfo(string $companyName, string $companyAcNo): PaymentInfo
+    {
+        $debtorBankCode = '190101';
+        $paymentInfoId = fake()->regexify('PMTINF0[A-Z0-9]{5}');
+
+        $paymentInfo = PaymentInfo::make()
+            ->setPaymentInfoId($paymentInfoId)
+            ->setPaymentMethod(PaymentMethod::CreditTransfer)
+            ->setBatchBooking(true)
+            ->setPaymentTypeInfo(InstructionPriority::Norm)
+            ->setRequestedExecutionDate(now())
+            ->setDebtor($companyName, new PostalAddress(countryCode: CountryCode::Ghana))
+            ->setDebtorAccount($companyAcNo, Currency::Cedi)
+            ->setDebtorAgent($debtorBankCode)
+            ->setChargeBearer(ChargeBearerType::Debt)
+            ->addCreditTransferTransactionInfo($this->getCreditTransferTransactionInfo());
+
+        return $paymentInfo;
+    }
+
+    public function getCreditTransferTransactionInfo(): CreditTransferTransactionInfo
+    {
+        $paymentId = fake()->regexify('PMT0[A-Z0-9]{5}');
+        $instructionId = fake()->regexify('INST0[A-Z0-9]{5}');
+        $amount = fake()->numberBetween(1_000, 1_999);
+
+        $creditorBankCode = '190101';
+        $bank = 'Stanbic Bank Ghana Ltd';
+        $beneficiaryName = 'Darion Ferry';
+        $beneficiaryAcNo = '9040006383453';
+
+        $paymentDescription = fake()->words(3, true);
+
+        return CreditTransferTransactionInfo::make()
             ->setPaymentId($paymentId, $instructionId)
             ->setAmount($amount, Currency::Cedi)
-            ->setCreditorAgent($bankCode, $bank, new PostalAddress(countryCode: CountryCode::Ghana))
+            ->setCreditorAgent($creditorBankCode, $bank, new PostalAddress(countryCode: CountryCode::Ghana))
             ->setCreditor($beneficiaryName, new PostalAddress(
                 fake()->streetName(),
                 fake()->buildingNumber(),
@@ -132,27 +145,6 @@ class DemoSinglePaymentCommand extends Command
             ))
             ->setCreditorAccount($beneficiaryAcNo)
             ->setRemittanceInfo($paymentDescription);
-
-        // 3. Create payment info
-        $paymentInfo = PaymentInfo::make()
-            ->setPaymentInfoId($paymentInfoId)
-            ->setPaymentMethod(PaymentMethod::CreditTransfer)
-            ->setBatchBooking(true)
-            ->setPaymentTypeInfo(InstructionPriority::Norm)
-            ->setRequestedExecutionDate(now())
-            ->setDebtor($companyName, new PostalAddress(countryCode: CountryCode::Ghana))
-            ->setDebtorAccount($companyAcNo, Currency::Cedi)
-            ->setDebtorAgent($bankCode)
-            ->setChargeBearer(ChargeBearerType::Debt)
-            ->setCreditTransferTransactionInfo($transactionInfo);
-
-        // 4. Generate and store XML
-        $filePath = Pain00100103::make()
-            ->setGroupHeader($groupHeader)
-            ->setPaymentInfo($paymentInfo)
-            ->store(); // Returns the stored file path
-
-        $this->line("Saved to: \n\t{$filePath}");
     }
 }
 ```
