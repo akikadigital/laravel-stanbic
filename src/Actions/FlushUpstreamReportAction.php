@@ -47,6 +47,7 @@ class FlushUpstreamReportAction
             return;
         }
 
-        Storage::disk($this->backupDisk)->put(basename($path), $contents);
+        $backupPath = "$this->backupRoot/".basename($path);
+        Storage::disk($this->backupDisk)->put($backupPath, $contents);
     }
 }
