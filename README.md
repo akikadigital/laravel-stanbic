@@ -12,12 +12,12 @@ Configure `sftp` first before you proceed: https://laravel.com/docs/12.x/filesys
 Add the SFTP configs in the `config/filesystem.php`. Below is the recommended set of configs. Ensure you set the corresponding env values in your `.env` as well:
 
 ```php
-'sftp' => [
+'stanbic_sftp' => [
     'driver' => 'sftp',
-    'host' => env('SFTP_HOST'),
-    'port' => (int) env('SFTP_PORT', 22),
-    'username' => env('SFTP_USERNAME'),
-    'privateKey' => env('SFTP_PRIVATE_KEY'),
+    'host' => env('STANBIC_SFTP_HOST'),
+    'port' => (int) env('STANBIC_SFTP_PORT', 22),
+    'username' => env('STANBIC_SFTP_USERNAME'),
+    'privateKey' => env('STANBIC_SFTP_PRIVATE_KEY'),
     'throw' => true,
 ],
 ```
@@ -37,12 +37,17 @@ You can skip thse optional steps.
 In your `.env`, configure which filesystem disk we will read and write the payment files to. This is already preconfigured to pick the `sftp` disk.
 
 ```shell
+STANBIC_SFTP_HOST=
+STANBIC_SFTP_PORT=22
+STANBIC_SFTP_USERNAME=
+STANBIC_SFTP_PRIVATE_KEY=
+
 STANBIC_FILESYSTEM_DISK=sftp
 STANBIC_INPUT_ROOT="Input"
 STANBIC_OUTPUT_ROOT="Output"
 ```
 
-You can publish the config file with:
+You can publish the config file with (optional):
 
 ```bash
 php artisan vendor:publish --tag="laravel-stanbic-config"
@@ -82,8 +87,8 @@ class DemoSinglePaymentCommand extends Command
     public function handle()
     {
         $messageId = fake()->regexify('MSG0[A-Z0-9]{5}');
-        $companyName = 'CINCH.MARKETS/CINCHH2H';
-        $companyAcNo = '9040012825999';
+        $companyName = 'MY.COMPANY/NAMEC2C';
+        $companyAcNo = '1234567891234';
 
         // 1. Create group header
         $groupHeader = GroupHeader::make()
@@ -128,7 +133,7 @@ class DemoSinglePaymentCommand extends Command
         $creditorBankCode = '190101';
         $bank = 'Stanbic Bank Ghana Ltd';
         $beneficiaryName = 'Darion Ferry';
-        $beneficiaryAcNo = '9040006383453';
+        $beneficiaryAcNo = '4321987654321';
 
         $paymentDescription = fake()->words(3, true);
 
