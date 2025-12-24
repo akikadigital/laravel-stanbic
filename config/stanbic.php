@@ -22,4 +22,10 @@ return [
     |  - MY_COMPANYC2C_Pain001v3_GH_PRD_
     */
     'output_file_prefix' => env('STANBIC_OUTPUT_FILE_PREFIX'),
+
+    'backup' => [
+        'enabled' => (bool) env('STANBIC_REPORTS_BACKUP_ENABLED', true),
+        'disk' => env('STANBIC_REPORTS_BACKUP_DISK', 'local'),
+        'root' => env('STANBIC_REPORTS_BACKUP_ROOT', ''),
+    ],
 ];

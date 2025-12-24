@@ -32,6 +32,8 @@ class ReadStatusReportsAction
             $report = Pain00200103::fromXml($contents);
 
             Pain00200103ReportReceived::dispatch($report);
+
+            (new FlushUpstreamReportAction)->handle($path);
         });
     }
 
