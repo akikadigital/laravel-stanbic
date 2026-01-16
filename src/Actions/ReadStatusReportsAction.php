@@ -29,7 +29,7 @@ class ReadStatusReportsAction
         $this->reportPaths->each(function (string $path) {
             $contents = $this->getFileContents($path);
 
-            $report = Pain00200103::fromXml($contents);
+            $report = new Pain00200103($contents);
 
             Pain00200103ReportReceived::dispatch($report);
 

@@ -17,17 +17,12 @@ class Pain00200103
     /** @var Collection<int, OriginalPaymentInfoAndStatus> */
     public ?Collection $originalPaymentInfoAndStatuses;
 
-    public function __construct(public XmlReader $xmlReader) {}
-
-    public static function fromXml(string $xml): self
+    public function __construct(public string $xml)
     {
-        $report = new self(XmlReader::fromString($xml));
-
-        $report->groupHeader = GroupHeader::fromXmlReader($report->xmlReader);
-        $report->originalGroupInfoAndStatus = OriginalGroupInfoAndStatus::fromXmlReader($report->xmlReader);
-        $report->originalPaymentInfoAndStatuses = OriginalPaymentInfoAndStatus::fromXmlReader($report->xmlReader);
-
-        return $report;
+        $xmlReader = XmlReader::fromString($xml);
+        $this->groupHeader = GroupHeader::fromXmlReader($xmlReader);
+        $this->originalGroupInfoAndStatus = OriginalGroupInfoAndStatus::fromXmlReader($xmlReader);
+        $this->originalPaymentInfoAndStatuses = OriginalPaymentInfoAndStatus::fromXmlReader($xmlReader);
     }
 
     /** @return Collection<int, string> */

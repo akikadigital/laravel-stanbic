@@ -12,7 +12,7 @@ class Pain00200103Test extends TestCase
 
     public function test_can_parse_xml(): void
     {
-        $report = Pain00200103::fromXml($this->ackReport());
+        $report = new Pain00200103($this->ackReport());
 
         $expectedOrgMsgId = 'DPTS001';
         $this->assertEquals($expectedOrgMsgId, $report->originalGroupInfoAndStatus->originalMessageId);
@@ -20,7 +20,7 @@ class Pain00200103Test extends TestCase
 
     public function test_can_get_original_payment_info(): void
     {
-        $report = Pain00200103::fromXml($this->invalidAccountNoReport());
+        $report = new Pain00200103($this->invalidAccountNoReport());
 
         $record = $report->originalPaymentInfoAndStatuses->first();
         $this->assertEquals('1000075215', $record->originalPaymentInfoId);
@@ -28,7 +28,7 @@ class Pain00200103Test extends TestCase
 
     public function test_can_get_all_nested_errors(): void
     {
-        $report = Pain00200103::fromXml($this->invalidAccountNoReport());
+        $report = new Pain00200103($this->invalidAccountNoReport());
 
         $expected = [
             'Status : Processing failed',
