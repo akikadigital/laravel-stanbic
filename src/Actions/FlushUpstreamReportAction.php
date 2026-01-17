@@ -9,6 +9,8 @@ class FlushUpstreamReportAction
 {
     public string $disk;
 
+    public bool $cleanupAfterProcessing;
+
     public bool $backupEnabled;
 
     public string $backupDisk;
@@ -20,6 +22,10 @@ class FlushUpstreamReportAction
         /** @var string */
         $disk = config('stanbic.disk');
         $this->disk = $disk;
+
+        /** @var bool */
+        $cleanupAfterProcessing = config('stanbic.cleanup_after_processing');
+        $this->cleanupAfterProcessing = $cleanupAfterProcessing;
 
         /** @var bool */
         $backupEnabled = config('stanbic.backup.enabled');
@@ -36,12 +42,26 @@ class FlushUpstreamReportAction
 
     public function handle(string $path): void
     {
+        $this->backup($path);
+
+        $this->cleanup($path);
+    }
+
+    public function cleanup(string $path): void
+    {
+        if (! $this->cleanupAfterProcessing) {
+            return;
+        }
+
+        Storage::disk($this->disk)->delete($path);
+    }
+
+    public function backup(string $path): void
+    {
         $contents = Storage::disk($this->disk)->get($path);
         if (! $contents) {
             throw new FileNotFoundException;
         }
-
-        Storage::disk($this->disk)->delete($path);
 
         if (! $this->backupEnabled) {
             return;

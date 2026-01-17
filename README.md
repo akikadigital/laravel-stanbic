@@ -30,27 +30,38 @@ You can install the package via composer:
 composer require akika/laravel-stanbic
 ```
 
-### Optional Steps
-
-You can skip thse optional steps.
-
-In your `.env`, configure which filesystem disk we will read and write the payment files to. This is already preconfigured to pick the `sftp` disk.
-
-```shell
-STANBIC_SFTP_HOST=
-STANBIC_SFTP_PORT=22
-STANBIC_SFTP_USERNAME=
-STANBIC_SFTP_PRIVATE_KEY=
-
-STANBIC_FILESYSTEM_DISK=sftp
-STANBIC_INPUT_ROOT="Input"
-STANBIC_OUTPUT_ROOT="Output"
-```
-
 You can publish the config file with (optional):
 
 ```bash
 php artisan vendor:publish --tag="laravel-stanbic-config"
+```
+
+### Environment Variables
+
+Add the following environment variables to your `.env` file:
+
+```bash
+# SFTP Connection Settings
+STANBIC_SFTP_HOST=your-sftp-host.example.com
+STANBIC_SFTP_PORT=22
+STANBIC_SFTP_USERNAME=your-username
+STANBIC_SFTP_PRIVATE_KEY=/path/to/your/private/key
+
+# File System Configuration
+STANBIC_FILESYSTEM_DISK=stanbic_sftp          # The disk to use for SFTP operations
+STANBIC_INPUT_ROOT=Inbox                      # Directory where incoming reports are read from
+STANBIC_OUTPUT_ROOT=Outbox                    # Directory where outgoing files are uploaded to
+
+# Output File Naming
+STANBIC_OUTPUT_FILE_PREFIX=MY_COMPANYC2C_Pain001v3_GH_TST_  # Prefix for generated files (include environment suffix)
+
+# Report Processing
+STANBIC_REPORTS_CLEANUP_AFTER_PROCESSING=true  # Remove processed reports from SFTP server to prevent re-processing
+
+# Backup Settings
+STANBIC_REPORTS_BACKUP_ENABLED=true            # Enable local backup of processed reports
+STANBIC_REPORTS_BACKUP_DISK=local              # Local disk for storing report backups
+STANBIC_REPORTS_BACKUP_ROOT=stanbic/reports    # Directory path within backup disk for storing reports
 ```
 
 ## Usage

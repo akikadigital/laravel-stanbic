@@ -23,6 +23,17 @@ return [
     */
     'output_file_prefix' => env('STANBIC_OUTPUT_FILE_PREFIX'),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Cleanup After Processing
+    |--------------------------------------------------------------------------
+    | Whether or not to remove the report from Stanbic once we've
+    | processed it.
+    | This helps reduce clutter in the Inbox folder, as these reports
+    | will be processed repeatedly if we don't clean up after ourselves.
+    */
+    'cleanup_after_processing' => (bool) env('STANBIC_REPORTS_CLEANUP_AFTER_PROCESSING', true),
+
     'backup' => [
         'enabled' => (bool) env('STANBIC_REPORTS_BACKUP_ENABLED', true),
         'disk' => env('STANBIC_REPORTS_BACKUP_DISK', 'local'),
