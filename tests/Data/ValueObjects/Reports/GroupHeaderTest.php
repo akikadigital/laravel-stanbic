@@ -28,12 +28,12 @@ class GroupHeaderTest extends TestCase
 
         $root = '//CstmrPmtStsRpt/GrpHdr';
         $messageId = $this->xmlReader->xpathValue("{$root}/MsgId")->sole();
-        $creditDateTime = $this->xmlReader->xpathValue("{$root}/CreDtTm")->sole();
+        $creationDateTime = $this->xmlReader->xpathValue("{$root}/CreDtTm")->sole();
         $initiatingPartyName = $this->xmlReader->xpathValue("{$root}/InitgPty/Nm")->sole();
         $initiatingPartyBicOrBei = $this->xmlReader->xpathValue("{$root}/InitgPty/Id/OrgId/BICOrBEI")->sole();
 
         $this->assertEquals($messageId, $groupHeader->messageId);
-        $this->assertTrue(Carbon::parse($creditDateTime)->eq($groupHeader->creditDateTime));
+        $this->assertTrue(Carbon::parse($creationDateTime)->eq($groupHeader->creationDateTime));
         $this->assertEquals($initiatingPartyName, $groupHeader->initiatingPartyName);
         $this->assertEquals($initiatingPartyBicOrBei, $groupHeader->initiatingPartyBicOrBei);
     }
