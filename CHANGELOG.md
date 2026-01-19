@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-stanbic` will be documented in this file.
 
+## v0.0.5 - 2026-01-19
+
+- refactor: give variable correct name
+
 ## v0.0.4 - 2026-01-19
 
 - Add report backup and cleanup
