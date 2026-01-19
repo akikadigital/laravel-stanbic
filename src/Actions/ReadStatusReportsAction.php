@@ -7,6 +7,7 @@ use Akika\LaravelStanbic\Events\Pain00200103ReportReceived;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
+use Saloon\XmlWrangler\XmlReader;
 
 class ReadStatusReportsAction
 {
@@ -54,6 +55,19 @@ class ReadStatusReportsAction
 
                 return str_contains($contents, 'pain.002.001.03');
             })
+            ->mapWithKeys(function (string $path) {
+                // We want to process the oldest files first
+                // then the new ones after. Sort by date to achieve this
+                $root = '//CstmrPmtStsRpt/GrpHdr';
+                $xml = $this->getFileContents($path);
+
+                $xmlReader = XmlReader::fromString($xml);
+                /** @var string */
+                $creditDateTime = $xmlReader->xpathValue("{$root}/CreDtTm")->sole();
+
+                return [$creditDateTime => $path];
+            })
+            ->sortKeys()
             ->flatten();
 
         return $validReportPaths;
