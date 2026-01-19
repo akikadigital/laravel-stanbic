@@ -9,7 +9,7 @@ class GroupHeader
 {
     public function __construct(
         public string $messageId,
-        public Carbon $creditDateTime,
+        public Carbon $creationDateTime,
         public string $initiatingPartyName,
         public string $initiatingPartyBicOrBei,
     ) {}
@@ -22,7 +22,7 @@ class GroupHeader
         $messageId = $reader->xpathValue("{$root}/MsgId")->sole();
 
         /** @var string */
-        $creditDateTime = $reader->xpathValue("{$root}/CreDtTm")->sole();
+        $creationDateTime = $reader->xpathValue("{$root}/CreDtTm")->sole();
 
         /** @var string */
         $initiatingPartyName = $reader->xpathValue("{$root}/InitgPty/Nm")->sole();
@@ -32,7 +32,7 @@ class GroupHeader
 
         return new GroupHeader(
             $messageId,
-            Carbon::parse($creditDateTime),
+            Carbon::parse($creationDateTime),
             $initiatingPartyName,
             $initiatingPartyBicOrBei,
         );
