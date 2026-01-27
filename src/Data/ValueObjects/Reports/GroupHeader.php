@@ -3,13 +3,14 @@
 namespace Akika\LaravelStanbic\Data\ValueObjects\Reports;
 
 use Carbon\Carbon;
+use Carbon\CarbonImmutable;
 use Saloon\XmlWrangler\XmlReader;
 
 class GroupHeader
 {
     public function __construct(
         public string $messageId,
-        public Carbon $creationDateTime,
+        public Carbon|CarbonImmutable $creationDateTime,
         public string $initiatingPartyName,
         public string $initiatingPartyBicOrBei,
     ) {}

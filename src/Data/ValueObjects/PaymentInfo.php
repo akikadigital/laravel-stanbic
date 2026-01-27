@@ -7,6 +7,7 @@ use Akika\LaravelStanbic\Enums\Currency;
 use Akika\LaravelStanbic\Enums\InstructionPriority;
 use Akika\LaravelStanbic\Enums\PaymentMethod as PaymentMethodEnum;
 use Carbon\Carbon;
+use Carbon\CarbonImmutable;
 use Illuminate\Support\Collection;
 use ValueError;
 
@@ -112,7 +113,7 @@ class PaymentInfo extends XmlValueObject
         return $this;
     }
 
-    public function setRequestedExecutionDate(Carbon $date): self
+    public function setRequestedExecutionDate(Carbon|CarbonImmutable $date): self
     {
         $this->requestedExecutionDate = new RequestedExecutionDate($date);
 

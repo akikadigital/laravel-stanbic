@@ -4,6 +4,7 @@ namespace Akika\LaravelStanbic\Data\ValueObjects\Reports;
 
 use Akika\LaravelStanbic\Enums\GroupStatusType;
 use Carbon\Carbon;
+use Carbon\CarbonImmutable;
 use Saloon\XmlWrangler\XmlReader;
 
 class OriginalGroupInfoAndStatus
@@ -11,7 +12,7 @@ class OriginalGroupInfoAndStatus
     public function __construct(
         public string $originalMessageId,
         public string $originalMessageNameId,
-        public Carbon $originalCreditDateTime,
+        public Carbon|CarbonImmutable $originalCreditDateTime,
         public int $originalNumberOfTransactions,
         public float $originalControlSum,
         public GroupStatusType $groupStatus,

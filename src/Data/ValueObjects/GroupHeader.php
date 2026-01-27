@@ -3,6 +3,7 @@
 namespace Akika\LaravelStanbic\Data\ValueObjects;
 
 use Carbon\Carbon;
+use Carbon\CarbonImmutable;
 use ValueError;
 
 class GroupHeader extends XmlValueObject
@@ -58,7 +59,7 @@ class GroupHeader extends XmlValueObject
         return $this;
     }
 
-    public function setCreationDate(Carbon $dateTime): self
+    public function setCreationDate(Carbon|CarbonImmutable $dateTime): self
     {
         $this->creationDateTime = new CreationDateTime($dateTime);
 
