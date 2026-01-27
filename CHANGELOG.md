@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-stanbic` will be documented in this file.
 
+## v0.0.6 - 2026-01-27
+
+- refactor: accept union Carbon|CarbonImmutable type as param
+
 ## v0.0.5 - 2026-01-19
 
 - refactor: give variable correct name
